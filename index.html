@@ -1,0 +1,196 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AutismoTrack — rivojlanish skriningi</title><style>
+body{margin:0;font-family:Arial;background:#eef8ff;color:#17324a}.app{max-width:1080px;margin:auto;padding:14px}.card{background:#fff;border:1px solid #d8e6ef;border-radius:22px;padding:20px;margin-top:16px}.heroHome{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:center;min-height:66vh}.heroHome h2{font-size:34px;line-height:1.08;margin:8px 0 12px}.lead{font-size:16px;line-height:1.6;color:#526777}.badge{display:inline-flex;gap:7px;align-items:center;background:#eef2ff;color:#5145cd;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800}.homeGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.homeItem{border:1px solid #dce8ef;border-radius:15px;padding:13px;background:#fff}.homeItem b{display:block;margin-bottom:5px}.homeItem span{font-size:13px;color:#607180;line-height:1.4}.infoPanel{background:linear-gradient(145deg,#f6f8ff,#effaf6);border:1px solid #dce8ef;border-radius:20px;padding:17px}.infoPanel p{color:#526777;line-height:1.55}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.stepBox{background:#f8fafc;border:1px solid #e3ebf0;border-radius:13px;padding:11px;font-size:13px}.stepNo{font-weight:900;color:#6657f5}.notice{margin-top:14px;padding:12px 14px;background:#fff8e8;border:1px solid #f3df9d;border-radius:14px;color:#69551d;font-size:13px;line-height:1.45}.hidden{display:none!important}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}input,select,button{font-size:16px;padding:11px;border-radius:12px;border:1px solid #d8e6ef}button{font-weight:800;cursor:pointer}.primary{background:#6657f5;color:white;border:0}.secondary{background:#edf3f7}.note{font-size:12px;color:#64748b}.status{margin-top:10px;padding:10px;background:#f1f5f9;border-radius:12px;font-weight:700}.camera{position:relative;aspect-ratio:16/9;background:#111827;border-radius:18px;overflow:hidden}video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}canvas{position:absolute;inset:0;width:100%;height:100%;transform:scaleX(-1)}.preview{width:100%;max-height:230px;object-fit:cover;border-radius:14px;background:#eef2f6}.rec{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:8px;border:1px solid #d8e6ef;border-radius:12px;margin:7px 0}
+.game{position:relative;height:min(80vh,760px);min-height:560px;border-radius:24px;overflow:hidden;background:linear-gradient(#b9e9ff 0 42%,#8bd271 42%);touch-action:manipulation;user-select:none}.score{position:absolute;left:14px;top:14px;background:#ffffffe8;padding:9px 13px;border-radius:14px;font-weight:900;z-index:5}.holes{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);width:92%;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.hole{position:relative;aspect-ratio:1.05;background:radial-gradient(ellipse,#3f2b1d 0 45%,#2d1f16 46% 58%,transparent 59%);border-radius:50%}.critter{position:absolute;left:50%;bottom:5%;transform:translate(-50%,45%) scale(.7);font-size:clamp(54px,7vw,100px);opacity:0;transition:.16s}.critter.up{transform:translate(-50%,-27%) scale(1);opacity:1}.mini{position:absolute;right:12px;bottom:12px;width:145px;aspect-ratio:4/3;background:#111827;border:3px solid white;border-radius:14px;overflow:hidden;z-index:8;pointer-events:none}.mini video{width:100%;height:100%}.mini canvas{position:absolute;inset:0;width:100%;height:100%}.event{position:absolute;inset:0;background:#0002;display:flex;align-items:center;justify-content:center;z-index:7}.choices{display:flex;gap:18px;justify-content:center;align-items:center;width:92%}.face{width:min(28vw,240px);aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:white;border:5px solid white;box-shadow:0 10px 28px #0003}.face img{width:100%;height:100%;object-fit:cover}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.m{border:1px solid #d8e6ef;border-radius:14px;padding:12px}.m b{display:block;font-size:18px;margin-top:4px}pre{white-space:pre-wrap;background:#0f172a;color:#e5e7eb;padding:14px;border-radius:14px}@media(max-width:760px){.grid,.metrics,.heroHome{grid-template-columns:1fr}.homeGrid,.steps{grid-template-columns:1fr}.heroHome{min-height:auto}.heroHome h2{font-size:28px}.mini{width:105px}.rec{grid-template-columns:1fr 1fr}.rec>div{grid-column:1/-1}}
+</style></head><body><div class="app"><h1>AutismoTrack</h1>
+<section id="home" class="card">
+<div class="heroHome">
+  <div>
+    <div class="badge">🧠 1–3 yoshli bolalar uchun erta rivojlanish skriningi</div>
+    <h2>O‘yin davomida bolaning tabiiy reaksiyalarini kuzatamiz</h2>
+    <p class="lead">AutismoTrack bolaning o‘yin jarayonidagi diqqatini, ismiga javobini, ko‘z va bosh yo‘nalishini, mimikasini, ota-onani tanish reaksiyasini va oddiy reaksiya tezligini kuzatishga yordam beruvchi prototip platforma.</p>
+
+    <div class="homeGrid">
+      <div class="homeItem"><b>👀 Ko‘z va diqqat</b><span>Qarash yo‘nalishi, ekrandan chalg‘ish va diqqatning qaytishi kuzatiladi.</span></div>
+      <div class="homeItem"><b>🙂 Mimika</b><span>Tabassum, qosh harakati, ko‘z yumish va yuz ifodasidagi o‘zgarishlar qayd etiladi.</span></div>
+      <div class="homeItem"><b>🗣️ Ismga javob</b><span>Bola chaqirilganda bosh yoki nigohini qanchalik tez o‘zgartirishi o‘lchanadi.</span></div>
+      <div class="homeItem"><b>👨‍👩‍👧 Ota-onani tanish</b><span>Ota yoki ona rasmi boshqa odamlar orasida ko‘rsatilganda bolaning qarashi kuzatiladi.</span></div>
+      <div class="homeItem"><b>⚡ Reaksiya tezligi</b><span>O‘yindagi jonivorni bosish vaqti orqali oddiy javob tezligi qayd etiladi.</span></div>
+      <div class="homeItem"><b>🔁 Takroriy harakat</b><span>Bosh yo‘nalishining takroriy almashishi va kuzatuv sifati hisoblanadi.</span></div>
+    </div>
+
+    <div class="steps">
+      <div class="stepBox"><span class="stepNo">1-bosqich</span><br>Bola ma’lumotlari, ota-ona rasmi va tabiiy ovoz kiritiladi.</div>
+      <div class="stepBox"><span class="stepNo">2-bosqich</span><br>Bola 5 teshikli sodda o‘yinni o‘ynaydi.</div>
+      <div class="stepBox"><span class="stepNo">3-bosqich</span><br>Kamera kuzatuvlari yakunda bir joyga jamlanadi.</div>
+    </div>
+
+    <div class="notice"><b>Muhim:</b> platforma hozircha klinik tashxis qo‘ymaydi. U rivojlanishdagi ayrim xulqiy belgilarni dastlabki kuzatish uchun yaratilayotgan prototip.</div>
+    <div style="margin-top:16px"><button class="primary" onclick="go('setup')">Tekshiruvni boshlash</button></div>
+  </div>
+
+  <div class="infoPanel">
+    <h3 style="margin-top:0">🎮 Bola nima qiladi?</h3>
+    <p>Jonivor teshikdan chiqadi va bola uni bosadi. Jonivor bola bosishi uchun yetarli vaqt kutadi. O‘yin orasida qisqa chaqiriqlar va ota-onani tanish vazifasi tabiiy tarzda paydo bo‘ladi.</p>
+    <h3>🛡️ Ko‘z uchun ehtiyotkor rejim</h3>
+    <p>Tez miltillovchi tasvirlar, keskin yorug‘lik almashinuvi va ortiqcha vizual yuklama ishlatilmaydi.</p>
+    <h3>📷 Kamera nima uchun?</h3>
+    <p>Kamera yuz, ko‘z va bosh yo‘nalishidagi o‘zgarishlarni kuzatadi. O‘yin paytidagi kichik kamera oynasi ota-onaga bolaning yuzi kadrda ekanini tekshirish uchun ko‘rsatiladi.</p>
+  </div>
+</div>
+</section>
+<section id="setup" class="card hidden">
+<h2>Tekshiruvni sozlash</h2>
+<div class="grid">
+  <div><label>Bolaning ismi</label><input id="childName"></div>
+  <div><label>Yoshi</label><select id="age"><option>1</option><option selected>2</option><option>3</option></select></div>
+</div>
+<h3>Ota-ona rasmi</h3>
+<div class="grid">
+  <div>
+    <label>Rasm kimniki?</label>
+    <select id="parentType"><option value="mother">Ona</option><option value="father">Ota</option></select>
+    <div class="row" style="margin-top:8px">
+      <label class="secondary" style="padding:11px;border-radius:12px;cursor:pointer">Galereyadan tanlash<input id="parentFile" type="file" accept="image/*" style="display:none"></label>
+      <button class="secondary" onclick="openPCam()">📷 Kameradan tushirish</button>
+    </div>
+    <img id="parentPreview" class="preview">
+  </div>
+  <div id="pcamBox" class="hidden">
+    <div class="camera"><video id="pcam" autoplay muted playsinline></video></div>
+    <div class="row" style="margin-top:8px"><button class="primary" onclick="snapParent()">Rasmga olish</button><button class="secondary" onclick="closePCam()">Yopish</button></div>
+  </div>
+</div>
+<h3>Tabiiy chaqiriq ovozlari</h3>
+<p class="note">Tabiiy intonatsiyani saqlash uchun 2 ta qisqa chaqiriqni ota-ona yoki tekshiruvchi o‘z ovozida yozib oladi.</p>
+<div id="recorders"></div>
+<label><input id="consent" type="checkbox"> Ota-ona roziligi bor; bu klinik tashxis emasligini tushunaman.</label><br><br>
+<button class="primary" onclick="prepareChild()">Bola kamerasini tayyorlash</button>
+</section>
+<section id="cal" class="card hidden">
+<h2>Bola kamerasi</h2>
+<p class="note">Bolaning yuzi va ko‘zlari kadrda aniq ko‘rinib tursin.</p>
+<div class="camera"><video id="childVideo" autoplay muted playsinline></video><canvas id="childOverlay"></canvas></div>
+<div id="modelStatus" class="status">Kamera tahlili yuklanmoqda...</div>
+<div class="metrics">
+  <div class="m">Ko‘z yo‘nalishi<b id="lgaze">—</b></div>
+  <div class="m">Bosh yo‘nalishi<b id="lhead">—</b></div>
+  <div class="m">Tabassum<b id="lsmile">—</b></div>
+  <div class="m">Qosh harakati<b id="lbrow">—</b></div>
+  <div class="m">Og‘iz harakati<b id="ljaw">—</b></div>
+  <div class="m">Ko‘z yumish<b id="lblink">—</b></div>
+</div>
+<br><button class="primary" onclick="startGame()">O‘yinni boshlash</button>
+</section>
+<section id="gameSec" class="card hidden">
+<div id="game" class="game">
+  <div class="score">⭐ <span id="score">0</span> | ⏱ <span id="time">75</span> soniya</div>
+  <div class="holes">
+    <div class="hole"><div class="critter">🐭</div></div>
+    <div class="hole"><div class="critter">🐹</div></div>
+    <div class="hole"><div class="critter">🐰</div></div>
+    <div class="hole"><div class="critter">🐭</div></div>
+    <div class="hole"><div class="critter">🐹</div></div>
+  </div>
+  <div class="mini"><video id="miniVideo" autoplay muted playsinline></video><canvas id="miniOverlay"></canvas></div>
+</div>
+<div class="status">Jonivor chiqsa ustiga bosing. U bosilguncha yoki 3,5–4,5 soniya kutadi. Pastdagi kichik kamera faqat bolaning yuzi kadrda ekanini tekshirish uchun.</div>
+</section>
+<section id="result" class="card hidden">
+<h2>Tekshiruv natijasi</h2><div id="risk" class="status"></div>
+<div class="metrics">
+  <div class="m">O‘yindagi reaksiya vaqti<b id="rGame">—</b></div>
+  <div class="m">Ismga javob<b id="rName">—</b></div>
+  <div class="m">Erkalab chaqirishga javob<b id="rAff">—</b></div>
+  <div class="m">Ota-onani tanish<b id="rParent">—</b></div>
+  <div class="m">Ota-onaga qarash vaqti<b id="rParentLat">—</b></div>
+  <div class="m">Ko‘z yo‘nalishi o‘zgarishlari<b id="rGaze">—</b></div>
+  <div class="m">Bosh burilishlari<b id="rHead">—</b></div>
+  <div class="m">Tabassum o‘zgarishi<b id="rSmile">—</b></div>
+  <div class="m">Qosh harakati o‘zgarishi<b id="rBrow">—</b></div>
+  <div class="m">Ko‘z yumish soni<b id="rBlink">—</b></div>
+  <div class="m">Ekrandan chalg‘ish ulushi<b id="rOff">—</b></div>
+  <div class="m">Takroriy bosh almashishi<b id="rRep">—</b></div>
+  <div class="m">Kuzatuv aniqligi<b id="rConf">—</b></div>
+</div>
+<h3>Umumiy tahlil</h3><pre id="summary"></pre>
+<p class="note">Kamera o‘lchovlari haqiqiy kuzatuvlardan olinadi. Natijadagi xavf darajalari hozircha sinov uchun belgilangan va klinik tashxis hisoblanmaydi.</p>
+</section>
+</div><script type="module">
+import {FaceLandmarker,FilesetResolver,DrawingUtils} from 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22-rc.20250304/+esm';
+const $=x=>document.getElementById(x),wait=m=>new Promise(r=>setTimeout(r,m));let pImg=null,pStream=null,cStream=null,fl=null,last=-1,running=false,cur={face:false,gaze:'center',head:'center',yaw:0,blink:false,smile:0,brow:0,jaw:0},base={yaw:0,smile:0,brow:0,gaze:'center'},frames=0,faceFrames=0,blinkN=0,lastBlink=false,log=[],react=[],score=0,gStart=0,popTimer=null,activeCritter=null,popStart=0,audioMap={},rec=null,chunks=[],eventData={name:null,aff:null,parent:null,parentLat:null};
+window.go=id=>{document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));$(id).classList.remove('hidden')};
+$('parentFile').onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{pImg=r.result;$('parentPreview').src=pImg};r.readAsDataURL(f)};
+window.openPCam=async()=>{try{pStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});$('pcam').srcObject=pStream;$('pcamBox').classList.remove('hidden')}catch(e){alert('Kamera ruxsatini bering')}};window.closePCam=()=>{if(pStream)pStream.getTracks().forEach(t=>t.stop());pStream=null;$('pcamBox').classList.add('hidden')};window.snapParent=()=>{let v=$('pcam'),c=document.createElement('canvas');c.width=v.videoWidth||640;c.height=v.videoHeight||480;let x=c.getContext('2d');x.translate(c.width,0);x.scale(-1,1);x.drawImage(v,0,0,c.width,c.height);pImg=c.toDataURL('image/jpeg',.9);$('parentPreview').src=pImg;closePCam()};
+const prompts=[['call','Balandroq: “Hey, [ismi]!”'],['aff','Erkalab: “Iyeee, [ismi]…”']];function initRec(){let c=$('recorders');prompts.forEach(([k,l])=>{let d=document.createElement('div');d.className='rec';d.innerHTML=`<div><b>${l}</b><div id="s_${k}" class="note">yozilmagan</div></div><button class="secondary" id="b_${k}">🎙 Yozish</button><button class="secondary" id="p_${k}">▶ Sinash</button>`;c.appendChild(d);$('b_'+k).onclick=()=>record(k);$('p_'+k).onclick=()=>play(k)})}initRec();
+async function record(k){if(rec){rec.stop();return}try{let s=await navigator.mediaDevices.getUserMedia({audio:true});chunks=[];rec=new MediaRecorder(s);rec.ondataavailable=e=>chunks.push(e.data);rec.onstop=()=>{audioMap[k]=URL.createObjectURL(new Blob(chunks,{type:'audio/webm'}));$('s_'+k).textContent='✅ yozildi';s.getTracks().forEach(t=>t.stop());rec=null};rec.start();$('s_'+k).textContent='🔴 yozilmoqda';setTimeout(()=>{if(rec)rec.stop()},3500)}catch(e){alert('Mikrofon ruxsatini bering')}}function play(k){if(audioMap[k])new Audio(audioMap[k]).play();else alert('Avval yozing')}async function playWait(k){if(!audioMap[k])return;await new Promise(res=>{let a=new Audio(audioMap[k]);a.onended=res;a.onerror=res;a.play()})}
+async function initModel(){let v=await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22-rc.20250304/wasm');fl=await FaceLandmarker.createFromOptions(v,{baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task',delegate:'GPU'},runningMode:'VIDEO',numFaces:1,outputFaceBlendshapes:true});$('modelStatus').textContent='✅ Kamera tahlili tayyor'}
+window.prepareChild=async()=>{if(!$('consent').checked)return alert('Rozilikni belgilang');if(!$('childName').value.trim())return alert('Ismni kiriting');if(!pImg)return alert('Ota yoki ona rasmini kiriting');if(!audioMap.call||!audioMap.aff)return alert('2 ta ovozni yozing');try{cStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});$('childVideo').srcObject=cStream;$('miniVideo').srcObject=cStream;go('cal');if(!fl)await initModel();running=true;requestAnimationFrame(loop)}catch(e){alert('localhost/HTTPS va kamera ruxsati kerak')}};
+function bv(bs,n){let c=bs?.categories?.find(x=>x.categoryName===n);return c?c.score:0}function estimate(lm,bs){let a=lm[33],b=lm[133],i=lm[468],c=lm[362],d=lm[263],j=lm[473],q=((i.x-Math.min(a.x,b.x))/Math.max(.001,Math.abs(b.x-a.x))+(j.x-Math.min(c.x,d.x))/Math.max(.001,Math.abs(d.x-c.x)))/2,gaze=q<.42?'left':q>.58?'right':'center',nose=lm[1],mid=(a.x+d.x)/2,span=Math.abs(d.x-a.x),yaw=(nose.x-mid)/Math.max(.001,span),head=yaw<-.10?'left':yaw>.10?'right':'center',blink=(bv(bs,'eyeBlinkLeft')+bv(bs,'eyeBlinkRight'))/2>.58;if(blink&&!lastBlink)blinkN++;lastBlink=blink;cur={face:true,gaze,head,yaw,blink,smile:(bv(bs,'mouthSmileLeft')+bv(bs,'mouthSmileRight'))/2,brow:(bv(bs,'browInnerUp')+bv(bs,'browOuterUpLeft')+bv(bs,'browOuterUpRight'))/3,jaw:bv(bs,'jawOpen')}}
+function draw(cv,v,lm){cv.width=v.videoWidth||640;cv.height=v.videoHeight||360;let x=cv.getContext('2d');x.clearRect(0,0,cv.width,cv.height);if(!lm)return;let du=new DrawingUtils(x);du.drawConnectors(lm,FaceLandmarker.FACE_LANDMARKS_LEFT_EYE,{lineWidth:1});du.drawConnectors(lm,FaceLandmarker.FACE_LANDMARKS_RIGHT_EYE,{lineWidth:1});du.drawConnectors(lm,FaceLandmarker.FACE_LANDMARKS_FACE_OVAL,{lineWidth:1})}
+function loop(){if(!running)return;let v=$('childVideo');if(fl&&v.readyState>=2&&v.currentTime!==last){last=v.currentTime;frames++;let o=fl.detectForVideo(v,performance.now());if(o.faceLandmarks?.length){faceFrames++;cur.face=true;estimate(o.faceLandmarks[0],o.faceBlendshapes?.[0]);draw($('childOverlay'),v,o.faceLandmarks[0]);draw($('miniOverlay'),$('miniVideo'),o.faceLandmarks[0])}else cur.face=false;$('lgaze').textContent=cur.gaze==='left'?'chap':cur.gaze==='right'?'o‘ng':'markaz';$('lhead').textContent=cur.head==='left'?'chap':cur.head==='right'?'o‘ng':'markaz';$('lsmile').textContent=cur.smile.toFixed(2);$('lbrow').textContent=cur.brow.toFixed(2);$('ljaw').textContent=cur.jaw.toFixed(2);$('lblink').textContent=cur.blink?'ha':'yo‘q';if(gStart)log.push({t:performance.now()-gStart,...cur})}requestAnimationFrame(loop)}
+async function calibrate(){let ys=[],ss=[],bb=[],st=performance.now();while(performance.now()-st<1600){ys.push(cur.yaw);ss.push(cur.smile);bb.push(cur.brow);await wait(50)}let med=a=>{a.sort((x,y)=>x-y);return a[Math.floor(a.length/2)]||0};base={yaw:med(ys),smile:med(ss),brow:med(bb),gaze:cur.gaze}}
+const critters=[...document.querySelectorAll('.critter')];let critterTimeout=null,nextCritterTimer=null;critters.forEach(c=>c.onpointerdown=()=>{if(c!==activeCritter||!c.classList.contains('up'))return;react.push((performance.now()-popStart)/1000);score++;$('score').textContent=score;if(critterTimeout)clearTimeout(critterTimeout);c.textContent='✨';setTimeout(()=>{c.classList.remove('up');activeCritter=null;nextCritterTimer=setTimeout(pop,700+Math.random()*500)},450)});function pop(){if(activeCritter)return;activeCritter=critters[Math.floor(Math.random()*critters.length)];activeCritter.textContent=['🐭','🐹','🐰'][Math.floor(Math.random()*3)];activeCritter.classList.add('up');popStart=performance.now();critterTimeout=setTimeout(()=>{if(activeCritter){activeCritter.classList.remove('up');activeCritter=null;nextCritterTimer=setTimeout(pop,800+Math.random()*500)}},3500+Math.random()*1000)}function rnd(a,b){return a+Math.random()*(b-a)}
+window.startGame=async()=>{await calibrate();go('gameSec');gStart=performance.now();pop();setTimeout(()=>nameEvent('call'),rnd(20000,25000));setTimeout(()=>parentEvent(),rnd(42000,48000));setTimeout(()=>nameEvent('aff'),rnd(60000,66000));let t=75,tm=setInterval(()=>{t--;$('time').textContent=t;if(t<=0){clearInterval(tm);clearTimeout(popTimer);finish()}},1000)};
+async function nameEvent(k){if(!gStart)return;let before={...cur},st=performance.now();await playWait(k);let found=null,deadline=performance.now()+3000;while(performance.now()<deadline){if(Math.abs(cur.yaw-before.yaw)>.11||cur.gaze!==before.gaze||cur.head!==before.head||cur.smile-before.smile>.12||cur.brow-before.brow>.12){found=(performance.now()-st)/1000;break}await wait(40)}if(k==='call')eventData.name=found;else eventData.aff=found}
+async function parentEvent(){let wrap=$('game'),ov=document.createElement('div');ov.className='event';let side=['left','center','right'][Math.floor(Math.random()*3)],male=['https://randomuser.me/api/portraits/men/32.jpg','https://randomuser.me/api/portraits/men/46.jpg'],female=['https://randomuser.me/api/portraits/women/44.jpg','https://randomuser.me/api/portraits/women/68.jpg'],dist=$('parentType').value==='mother'?male:female,slots=['left','center','right'],html='<div class="choices">';for(let s of slots){let src=s===side?pImg:dist.shift();html+=`<div class="face"><img src="${src}"></div>`}html+='</div>';ov.innerHTML=html;wrap.appendChild(ov);let st=performance.now(),found=null,deadline=performance.now()+4000;while(performance.now()<deadline){let hit=(side==='left'&&(cur.gaze==='left'||cur.head==='left'))||(side==='right'&&(cur.gaze==='right'||cur.head==='right'))||(side==='center'&&cur.gaze==='center'&&cur.head==='center');if(hit){found=(performance.now()-st)/1000;break}await wait(50)}eventData.parent=found!=null;eventData.parentLat=found;await wait(700);ov.remove()}
+function median(a){if(!a.length)return null;let s=[...a].sort((x,y)=>x-y);return s[Math.floor(s.length/2)]}function repetitive(a){let p=0,c=0;for(let x of a){let s=x>.08?1:x<-.08?-1:0;if(s&&p&&s!==p)c++;if(s)p=s}return c}
+function finish(){
+gStart=0;
+if(activeCritter)activeCritter.classList.remove('up');
+let faces=log.filter(x=>x.face),
+off=faces.filter(x=>x.gaze!=='center'||x.head!=='center').length/Math.max(1,faces.length),
+rep=repetitive(faces.map(x=>x.yaw)),gs=0,hs=0,pg='center',ph='center';
+for(let x of faces){
+ if(x.gaze!==pg){gs++;pg=x.gaze}
+ if(x.head!==ph){hs++;ph=x.head}
+}
+let sd=Math.max(0,...faces.map(x=>x.smile-base.smile)),
+bd=Math.max(0,...faces.map(x=>x.brow-base.brow)),
+conf=faces.length/Math.max(1,log.length);
+
+go('result');
+$('rGame').textContent=(median(react)?.toFixed(2)||'—')+' soniya';
+$('rName').textContent=(eventData.name?.toFixed(2)||'—')+' soniya';
+$('rAff').textContent=(eventData.aff?.toFixed(2)||'—')+' soniya';
+$('rParent').textContent=eventData.parent?'reaksiya kuzatildi':'aniq reaksiya kuzatilmadi';
+$('rParentLat').textContent=(eventData.parentLat?.toFixed(2)||'—')+' soniya';
+$('rGaze').textContent=gs;
+$('rHead').textContent=hs;
+$('rSmile').textContent=sd.toFixed(2);
+$('rBrow').textContent=bd.toFixed(2);
+$('rBlink').textContent=blinkN;
+$('rOff').textContent=Math.round(off*100)+'%';
+$('rRep').textContent=rep;
+$('rConf').textContent=Math.round(conf*100)+'%';
+
+let flags=[];
+if(eventData.name==null)flags.push('ismga chaqirilganda aniq yo‘nalish reaksiyasi topilmadi');
+if(eventData.parent===false)flags.push('ota yoki ona yuziga aniq yo‘nalish reaksiyasi topilmadi');
+if(off>.6)flags.push('ekrandan chalg‘ish ulushi yuqori');
+if(rep>10)flags.push('takroriy bosh yo‘nalishi almashishi ko‘p');
+if(conf<.65)flags.push('kamera kuzatuv sifati past');
+
+let lvl=flags.length>=3?'YUQORI':flags.length>=1?'O‘RTACHA':'PAST';
+$('risk').innerHTML=(lvl==='YUQORI'?'🔴':lvl==='O‘RTACHA'?'🟠':'🟢')+' <b>Dastlabki kuzatuv darajasi: '+lvl+'</b>';
+
+$('summary').textContent=`O‘yin natijasi: ${score}
+Bosishga o‘rtacha reaksiya: ${median(react)?.toFixed(2)||'ma’lumot yo‘q'} soniya
+Ismga reaksiya: ${eventData.name?.toFixed(2)||'aniqlanmadi'} soniya
+Erkalab chaqirishga reaksiya: ${eventData.aff?.toFixed(2)||'aniqlanmadi'} soniya
+Ota-onani tanish: ${eventData.parent?'yo‘nalish reaksiyasi kuzatildi':'aniq emas'}
+Ota-onaga qarash vaqti: ${eventData.parentLat?.toFixed(2)||'ma’lumot yo‘q'} soniya
+Ko‘z yo‘nalishi o‘zgarishlari: ${gs}
+Bosh burilishlari: ${hs}
+Tabassum o‘zgarishi: ${sd.toFixed(3)}
+Qosh harakati o‘zgarishi: ${bd.toFixed(3)}
+Ko‘z yumish soni: ${blinkN}
+Ekrandan chalg‘ish ulushi: ${Math.round(off*100)}%
+Takroriy bosh yo‘nalishi almashishi: ${rep}
+Kuzatuv aniqligi: ${Math.round(conf*100)}%
+
+Kuzatilgan belgilar:
+${flags.length?flags.map((x,i)=>(i+1)+'. '+x).join('\n'):'Kuchli ogohlantiruvchi belgi kuzatilmadi.'}
+
+MUHIM: kamera o‘lchovlari haqiqiy kuzatuvlardan olinadi, ammo ular hali autizm spektri uchun klinik tasdiqlangan tashxis chegaralari emas.`;
+}
+</script></body></html>
