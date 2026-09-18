@@ -32,25 +32,25 @@ p{font-size:18px;line-height:1.55;color:var(--muted)}
 .heroArt{min-height:430px;border-radius:28px;background:linear-gradient(#bfe7ff 0 58%,#b8dd86 58% 100%);position:relative;overflow:hidden}
 .heroArt .sun{position:absolute;right:7%;top:8%;font-size:74px;z-index:2}
 .heroArt .cloud{position:absolute;font-size:54px;opacity:.95;z-index:2}
-.heroArt .c1{left:8%;top:10%}.heroArt .c2{right:29%;top:18%}
-.heroArt .mountainsMini{position:absolute;left:0;right:0;top:16%;height:40%;z-index:1}
-.heroArt .mountainMini{position:absolute;bottom:0;width:0;height:0;border-left:100px solid transparent;border-right:100px solid transparent;border-bottom:132px solid #86a1b5;filter:drop-shadow(0 5px 6px rgba(0,0,0,.07))}
-.heroArt .mountainMini:after{content:"";position:absolute;left:-29px;top:59px;width:0;height:0;border-left:29px solid transparent;border-right:29px solid transparent;border-bottom:36px solid #f7fbff;transform:rotate(180deg)}
-.heroArt .mm1{left:7%}
-.heroArt .mm2{left:34%;transform:scale(.86);opacity:.78}
-.heroArt .mm3{right:7%;transform:scale(1.02)}
-.heroArt .heroPrincess{position:absolute;left:50%;top:44%;transform:translateX(-50%);font-size:48px;z-index:2;clip-path:inset(0 0 45% 0);filter:drop-shadow(0 4px 7px rgba(0,0,0,.18))}
-.heroArt .bunny{position:absolute;left:50%;bottom:13%;transform:translateX(-50%);font-size:88px;z-index:3}
-.heroArt .groundMini{position:absolute;left:0;right:0;bottom:0;height:18%;z-index:2}
-.heroArt .gMini{position:absolute;font-size:24px}
-.heroArt .gm1{left:8%;bottom:6%}.heroArt .gm2{left:28%;bottom:4%}.heroArt .gm3{right:28%;bottom:5%}.heroArt .gm4{right:8%;bottom:7%}
+.heroArt .c1{left:7%;top:10%}.heroArt .c2{left:33%;top:18%}.heroArt .c3{right:24%;top:11%}.heroArt .c4{right:6%;top:20%}
+.heroArt .mountainsMini{position:absolute;left:0;right:0;top:18%;height:34%;z-index:1}
+.heroArt .mountainMini{position:absolute;bottom:0;width:0;height:0;border-left:86px solid transparent;border-right:86px solid transparent;border-bottom:118px solid #89a3b6;filter:drop-shadow(0 5px 6px rgba(0,0,0,.07))}
+.heroArt .mountainMini:after{content:"";position:absolute;left:-24px;top:54px;width:0;height:0;border-left:24px solid transparent;border-right:24px solid transparent;border-bottom:30px solid #f7fbff;transform:rotate(180deg)}
+.heroArt .mm1{left:6%}
+.heroArt .mm2{left:37%;transform:scale(.78);opacity:.72}
+.heroArt .mm3{right:6%;transform:scale(.98)}
+.heroArt .heroPrincess{position:absolute;left:50%;top:42%;transform:translateX(-50%);font-size:46px;z-index:2;clip-path:inset(0 0 46% 0);filter:drop-shadow(0 4px 7px rgba(0,0,0,.18))}
+.heroArt .bunny{position:absolute;left:50%;bottom:11%;transform:translateX(-50%);font-size:82px;z-index:3}
+.heroArt .groundMini{position:absolute;left:0;right:0;bottom:0;height:16%;z-index:2}
+.heroArt .gMini{position:absolute;font-size:22px}
+.heroArt .gm1{left:8%;bottom:4%}.heroArt .gm2{left:26%;bottom:3%}.heroArt .gm3{right:26%;bottom:4%}.heroArt .gm4{right:8%;bottom:5%}
 .heroArt .holesMini{position:absolute;inset:0;z-index:5}
-.heroArt .hmini{position:absolute;width:82px;height:34px;border-radius:50%;background:radial-gradient(ellipse,#4d321f 0 42%,#2e1f15 43% 60%,transparent 61%)}
-.heroArt .hmini:nth-child(1){left:16%;top:64%}
-.heroArt .hmini:nth-child(2){right:16%;top:64%}
-.heroArt .hmini:nth-child(3){left:10%;bottom:8%}
-.heroArt .hmini:nth-child(4){left:calc(50% - 41px);bottom:8%}
-.heroArt .hmini:nth-child(5){right:10%;bottom:8%}
+.heroArt .hmini{position:absolute;width:72px;height:30px;border-radius:50%;background:radial-gradient(ellipse,#4d321f 0 42%,#2e1f15 43% 60%,transparent 61%)}
+.heroArt .hmini:nth-child(1){left:18%;top:58%}
+.heroArt .hmini:nth-child(2){right:18%;top:58%}
+.heroArt .hmini:nth-child(3){left:9%;bottom:6%}
+.heroArt .hmini:nth-child(4){left:calc(50% - 36px);bottom:6%}
+.heroArt .hmini:nth-child(5){right:9%;bottom:6%}
 .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#eef1ff;color:#5245c8;font-weight:900;font-size:14px;margin-bottom:14px}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
 .feature{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fbfdff;font-size:14px;line-height:1.35}
@@ -92,19 +92,19 @@ p{font-size:18px;line-height:1.55;color:var(--muted)}
   touch-action:manipulation;
   user-select:none;
 }
-.mountains{position:absolute;left:0;right:0;top:16%;height:36%;pointer-events:none;z-index:1}
-.mountain{position:absolute;bottom:0;width:0;height:0;border-left:145px solid transparent;border-right:145px solid transparent;border-bottom:176px solid #7f9aae;filter:drop-shadow(0 6px 8px rgba(0,0,0,.06))}
-.mountain:after{content:"";position:absolute;left:-44px;top:66px;width:0;height:0;border-left:44px solid transparent;border-right:44px solid transparent;border-bottom:54px solid #f6fbff;transform:rotate(180deg)}
-.mountainBack{position:absolute;bottom:22px;width:0;height:0;border-left:112px solid transparent;border-right:112px solid transparent;border-bottom:136px solid #a7bac5;opacity:.72}
-.mb1{left:35%}
-.mb2{display:none}
-.m1{left:5%}
-.m2{display:none}
-.m3{right:5%;transform:scale(1.02)}
+.mountains{position:absolute;left:0;right:0;top:13%;height:30%;pointer-events:none;z-index:1}
+.mountain{position:absolute;bottom:0;width:0;height:0;border-left:125px solid transparent;border-right:125px solid transparent;border-bottom:158px solid #7f9aae;filter:drop-shadow(0 6px 8px rgba(0,0,0,.06))}
+.mountain:after{content:"";position:absolute;left:-38px;top:58px;width:0;height:0;border-left:38px solid transparent;border-right:38px solid transparent;border-bottom:46px solid #f6fbff;transform:rotate(180deg)}
+.mountainBack{position:absolute;bottom:20px;width:0;height:0;border-left:92px solid transparent;border-right:92px solid transparent;border-bottom:116px solid #a7bac5;opacity:.72}
+.mb1{left:28%}
+.mb2{right:28%;display:block}
+.m1{left:4%}
+.m2{left:37%;display:block;transform:scale(.82);opacity:.82}
+.m3{right:4%;transform:scale(1.0)}
 .groundDecor{position:absolute;left:0;right:0;bottom:0;height:24%;pointer-events:none;z-index:2}
-.flower{position:absolute;font-size:30px}.f1{left:7%;bottom:16%}.f2{left:20%;bottom:7%}.f3{right:18%;bottom:11%}.f4{right:5%;bottom:20%}
-.rock{position:absolute;font-size:38px}.r1{left:3%;bottom:4%}.r2{right:3%;bottom:5%}
-.bush{position:absolute;font-size:52px}.b1{left:31%;bottom:2%}.b2{right:30%;bottom:3%}
+.flower{position:absolute;font-size:25px}.f1{left:6%;bottom:2%}.f2{left:18%;bottom:1%}.f3{right:16%;bottom:2%}.f4{right:4%;bottom:1%}
+.rock{position:absolute;font-size:34px}.r1{left:1%;bottom:0}.r2{right:1%;bottom:0}
+.bush{position:absolute;font-size:44px}.b1{left:29%;bottom:0}.b2{right:29%;bottom:0}
 
 .gameTop{
   position:absolute;left:12px;right:12px;top:12px;display:flex;justify-content:space-between;align-items:flex-start;z-index:15;pointer-events:none
@@ -115,17 +115,17 @@ p{font-size:18px;line-height:1.55;color:var(--muted)}
 }
 .miniCam video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
 .miniCam canvas{position:absolute;width:112px;height:84px;right:0;top:0;transform:scaleX(-1)}
-.decor{position:absolute;font-size:56px;pointer-events:none}.sun{right:8%;top:13%;font-size:72px}.cloud1{left:7%;top:10%}.cloud2{left:30%;top:20%}
-.holes{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);width:min(900px,92%);height:40%;z-index:6}
-.hole{position:absolute;width:25%;aspect-ratio:1.05;background:radial-gradient(ellipse,#49301f 0 43%,#2e2017 44% 58%,transparent 59%);border-radius:50%}
-.hole:nth-child(1){left:18%;top:12%}
-.hole:nth-child(2){right:18%;top:12%}
-.hole:nth-child(3){left:3%;bottom:0}
-.hole:nth-child(4){left:37.5%;bottom:0}
-.hole:nth-child(5){right:3%;bottom:0}
+.decor{position:absolute;font-size:56px;pointer-events:none}.sun{right:8%;top:13%;font-size:72px}.cloud1{left:7%;top:10%}.cloud2{left:30%;top:19%}.cloud3{right:28%;top:9%}.cloud4{right:12%;top:18%}
+.holes{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);width:min(860px,88%);height:32%;z-index:6}
+.hole{position:absolute;width:20%;aspect-ratio:1.05;background:radial-gradient(ellipse,#49301f 0 43%,#2e2017 44% 58%,transparent 59%);border-radius:50%}
+.hole:nth-child(1){left:16%;top:12%}
+.hole:nth-child(2){right:16%;top:12%}
+.hole:nth-child(3){left:4%;bottom:0}
+.hole:nth-child(4){left:40%;bottom:0}
+.hole:nth-child(5){right:4%;bottom:0}
 .critter{position:absolute;left:50%;bottom:4%;transform:translate(-50%,46%) scale(.72);font-size:clamp(64px,9vw,120px);opacity:0;transition:.20s ease}
 .critter.up{opacity:1;transform:translate(-50%,-28%) scale(1)}
-.gameMessage{position:absolute;left:50%;top:17%;transform:translateX(-50%);background:#fff;padding:12px 20px;border-radius:20px;font-size:clamp(22px,4vw,34px);font-weight:1000;z-index:12;box-shadow:0 8px 20px #0002;opacity:0;transition:.2s;pointer-events:none}
+.gameMessage{position:absolute;left:50%;top:16%;transform:translateX(-50%);background:#fff;padding:12px 20px;border-radius:20px;font-size:clamp(22px,4vw,34px);font-weight:1000;z-index:12;box-shadow:0 8px 20px #0002;opacity:0;transition:.2s;pointer-events:none}
 .gameMessage.show{opacity:1}
 .princessHost{position:absolute;right:13%;top:27%;width:120px;height:110px;z-index:11;pointer-events:none}
 .princessPeek{position:absolute;right:0;bottom:0;font-size:72px;clip-path:inset(0 0 42% 0);transform:translateX(92px);opacity:0;transition:transform .45s ease,opacity .35s ease;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
@@ -179,13 +179,13 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
   .score{font-size:15px;padding:8px 10px}
   .miniCam{width:84px;border-width:3px}
   .miniCam canvas{width:84px;height:63px}
-  .holes{width:98%;height:47%;bottom:4%}
-  .hole{width:29%}
-  .hole:nth-child(1){left:18%;top:1%}
-  .hole:nth-child(2){right:18%;top:1%}
-  .hole:nth-child(3){left:1%;bottom:0}
-  .hole:nth-child(4){left:35.5%;bottom:0}
-  .hole:nth-child(5){right:1%;bottom:0}
+  .holes{width:98%;height:36%;bottom:5%}
+  .hole{width:24%}
+  .hole:nth-child(1){left:14%;top:10%}
+  .hole:nth-child(2){right:14%;top:10%}
+  .hole:nth-child(3){left:2%;bottom:0}
+  .hole:nth-child(4){left:38%;bottom:0}
+  .hole:nth-child(5){right:2%;bottom:0}
   .critter{font-size:clamp(50px,16vw,78px)}
   .choiceOverlay{padding:10px}
   .choiceGrid{gap:8px;width:98%}
@@ -214,7 +214,7 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
         <p class="note" style="margin-top:12px">Bu yakuniy tashxis emas. Natijalar rivojlanish bo‘yicha dastlabki kuzatuv uchun.</p>
       </div>
       <div class="heroArt">
-        <div class="sun">🌞</div><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div>
+        <div class="sun">🌞</div><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><div class="cloud c3">☁️</div><div class="cloud c4">☁️</div>
         <div class="mountainsMini">
           <div class="mountainMini mm1"></div><div class="mountainMini mm2"></div><div class="mountainMini mm3"></div>
         </div>
@@ -304,7 +304,7 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
           <canvas id="miniOverlay"></canvas>
         </div>
       </div>
-      <div class="decor sun">🌞</div><div class="decor cloud1">☁️</div><div class="decor cloud2">☁️</div>
+      <div class="decor sun">🌞</div><div class="decor cloud1">☁️</div><div class="decor cloud2">☁️</div><div class="decor cloud3">☁️</div><div class="decor cloud4">☁️</div>
       <div class="mountains">
         <div class="mountainBack mb1"></div><div class="mountainBack mb2"></div>
         <div class="mountain m1"></div><div class="mountain m2"></div><div class="mountain m3"></div>
