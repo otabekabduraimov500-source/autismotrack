@@ -29,28 +29,10 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-1.3px;margin-
 h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:14px}
 p{font-size:18px;line-height:1.55;color:var(--muted)}
 .hero{min-height:74vh;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center}
-.heroArt{min-height:430px;border-radius:28px;background:linear-gradient(#bfe7ff 0 58%,#b8dd86 58% 100%);position:relative;overflow:hidden}
-.heroArt .sun{position:absolute;right:7%;top:8%;font-size:74px;z-index:2}
-.heroArt .cloud{position:absolute;font-size:54px;opacity:.95;z-index:2}
-.heroArt .c1{left:7%;top:10%}.heroArt .c2{left:33%;top:18%}.heroArt .c3{right:24%;top:11%}.heroArt .c4{right:6%;top:20%}
-.heroArt .mountainsMini{position:absolute;left:0;right:0;top:24%;height:34%;z-index:1}
-.heroArt .mountainMini{position:absolute;bottom:0;width:0;height:0;border-left:86px solid transparent;border-right:86px solid transparent;border-bottom:118px solid #89a3b6;filter:drop-shadow(0 5px 6px rgba(0,0,0,.07));transform-origin:center bottom}
-.heroArt .mountainMini:after{content:"";position:absolute;left:-24px;top:54px;width:0;height:0;border-left:24px solid transparent;border-right:24px solid transparent;border-bottom:30px solid #f7fbff;transform:rotate(180deg)}
-.heroArt .mm1{left:6%}
-.heroArt .mm2{left:37%;transform:scale(.78);opacity:.72}
-.heroArt .mm3{right:6%;transform:scale(.98)}
-.heroArt .heroPrincess{position:absolute;left:50%;top:46%;transform:translateX(-50%);font-size:42px;z-index:4;clip-path:inset(0 0 40% 0);filter:drop-shadow(0 4px 7px rgba(0,0,0,.18))}
-.heroArt .bunny{position:absolute;left:50%;bottom:11%;transform:translateX(-50%);font-size:82px;z-index:3}
-.heroArt .groundMini{position:absolute;left:0;right:0;bottom:0;height:16%;z-index:2}
-.heroArt .gMini{position:absolute;font-size:22px}
-.heroArt .gm1{left:8%;bottom:4%}.heroArt .gm2{left:26%;bottom:3%}.heroArt .gm3{right:26%;bottom:4%}.heroArt .gm4{right:8%;bottom:5%}
-.heroArt .holesMini{position:absolute;inset:0;z-index:5}
-.heroArt .hmini{position:absolute;width:72px;height:30px;border-radius:50%;background:radial-gradient(ellipse,#4d321f 0 42%,#2e1f15 43% 60%,transparent 61%)}
-.heroArt .hmini:nth-child(1){left:18%;top:58%}
-.heroArt .hmini:nth-child(2){right:18%;top:58%}
-.heroArt .hmini:nth-child(3){left:9%;bottom:6%}
-.heroArt .hmini:nth-child(4){left:calc(50% - 36px);bottom:6%}
-.heroArt .hmini:nth-child(5){right:9%;bottom:6%}
+.heroArt{min-height:430px;border-radius:28px;position:relative;overflow:hidden;background:#dff3ff}
+.heroArt .scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.heroArt .heroPrincess{position:absolute;right:9%;top:30%;font-size:44px;z-index:4;filter:drop-shadow(0 4px 7px rgba(0,0,0,.18))}
+.heroArt .heroBunny{position:absolute;left:50%;bottom:12.3%;transform:translateX(-50%);font-size:62px;z-index:5;filter:drop-shadow(0 4px 6px rgba(0,0,0,.22))}
 .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#eef1ff;color:#5245c8;font-weight:900;font-size:14px;margin-bottom:14px}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
 .feature{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fbfdff;font-size:14px;line-height:1.35}
@@ -92,19 +74,7 @@ p{font-size:18px;line-height:1.55;color:var(--muted)}
   touch-action:manipulation;
   user-select:none;
 }
-.mountains{position:absolute;left:0;right:0;top:13%;height:30%;pointer-events:none;z-index:1}
-.mountain{position:absolute;bottom:0;width:0;height:0;border-left:125px solid transparent;border-right:125px solid transparent;border-bottom:158px solid #7f9aae;filter:drop-shadow(0 6px 8px rgba(0,0,0,.06))}
-.mountain:after{content:"";position:absolute;left:-38px;top:58px;width:0;height:0;border-left:38px solid transparent;border-right:38px solid transparent;border-bottom:46px solid #f6fbff;transform:rotate(180deg)}
-.mountainBack{position:absolute;bottom:20px;width:0;height:0;border-left:92px solid transparent;border-right:92px solid transparent;border-bottom:116px solid #a7bac5;opacity:.72}
-.mb1{left:28%}
-.mb2{right:28%;display:block}
-.m1{left:4%}
-.m2{left:37%;display:block;transform:scale(.82);opacity:.82}
-.m3{right:4%;transform:scale(1.0)}
-.groundDecor{position:absolute;left:0;right:0;bottom:0;height:24%;pointer-events:none;z-index:2}
-.flower{position:absolute;font-size:25px}.f1{left:6%;bottom:2%}.f2{left:18%;bottom:1%}.f3{right:16%;bottom:2%}.f4{right:4%;bottom:1%}
-.rock{position:absolute;font-size:34px}.r1{left:1%;bottom:0}.r2{right:1%;bottom:0}
-.bush{position:absolute;font-size:44px}.b1{left:29%;bottom:0}.b2{right:29%;bottom:0}
+.scene{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:1}
 
 .gameTop{
   position:absolute;left:12px;right:12px;top:12px;display:flex;justify-content:space-between;align-items:flex-start;z-index:15;pointer-events:none
@@ -115,16 +85,25 @@ p{font-size:18px;line-height:1.55;color:var(--muted)}
 }
 .miniCam video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
 .miniCam canvas{position:absolute;width:112px;height:84px;right:0;top:0;transform:scaleX(-1)}
-.decor{position:absolute;font-size:56px;pointer-events:none}.sun{right:8%;top:13%;font-size:72px}.cloud1{left:7%;top:10%}.cloud2{left:30%;top:19%}.cloud3{right:28%;top:9%}.cloud4{right:12%;top:18%}
-.holes{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);width:min(760px,84%);height:30%;z-index:6}
-.hole{position:absolute;width:17%;aspect-ratio:1.05;background:radial-gradient(ellipse,#49301f 0 43%,#2e2017 44% 58%,transparent 59%);border-radius:50%}
-.hole:nth-child(1){left:31%;top:12%;transform:translateX(-50%)}
-.hole:nth-child(2){left:69%;top:12%;transform:translateX(-50%)}
-.hole:nth-child(3){left:16%;bottom:0;transform:translateX(-50%)}
-.hole:nth-child(4){left:50%;bottom:0;transform:translateX(-50%)}
-.hole:nth-child(5){left:84%;bottom:0;transform:translateX(-50%)}
-.critter{position:absolute;left:50%;bottom:4%;transform:translate(-50%,46%) scale(.72);font-size:clamp(64px,9vw,120px);opacity:0;transition:.20s ease}
-.critter.up{opacity:1;transform:translate(-50%,-28%) scale(1)}
+/* burrows: bottom edge sits exactly on the hole drawn in the SVG scene */
+.burrow{
+  position:absolute;transform:translateX(-50%);
+  width:1.85em;height:1.3em;overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;
+  font-size:clamp(44px,7vw,92px);z-index:8;
+}
+.burrow.far{font-size:clamp(32px,5.2vw,68px);z-index:7}
+.b1{left:23%;bottom:14.29%}
+.b2{left:50%;bottom:12.29%}
+.b3{left:77%;bottom:14.29%}
+.b4{left:35%;bottom:32.86%}
+.b5{left:65%;bottom:32.86%}
+.critter{
+  font-size:1em;line-height:1.05;cursor:pointer;
+  transform:translateY(118%);transition:transform .22s ease;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.28));
+}
+.critter.up{transform:translateY(7%)}
 .gameMessage{position:absolute;left:50%;top:16%;transform:translateX(-50%);background:#fff;padding:12px 20px;border-radius:20px;font-size:clamp(22px,4vw,34px);font-weight:1000;z-index:12;box-shadow:0 8px 20px #0002;opacity:0;transition:.2s;pointer-events:none}
 .gameMessage.show{opacity:1}
 .princessHost{position:absolute;right:13%;top:27%;width:120px;height:110px;z-index:11;pointer-events:none}
@@ -152,6 +131,28 @@ p{font-size:18px;line-height:1.55;color:var(--muted)}
 pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;padding:16px;line-height:1.55;font-size:14px}
 .note{font-size:13px;color:var(--muted);line-height:1.45}
 
+/* AI analysis */
+.aiBar{height:12px;border-radius:999px;background:#e9f1f7;overflow:hidden;margin:14px 0 16px}
+.aiBar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#6f5dfd,#52c2ec);transition:width .45s ease}
+.aiSteps{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.aiSteps li{display:flex;gap:10px;align-items:center;font-weight:800;font-size:16px;color:#93a6b5;background:#f8fbfd;border:1px solid var(--line);border-radius:14px;padding:11px 13px}
+.aiSteps li .ic{width:24px;text-align:center;flex:0 0 auto}
+.aiSteps li.run{color:#5245c8;border-color:#d3d7ff;background:#f4f5ff}
+.aiSteps li.done{color:#2c7a50;border-color:#cfeadb;background:#f3fbf6}
+.chartGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chartBlock{margin-top:14px;border:1px solid var(--line);border-radius:22px;padding:16px;background:#fbfdff}
+.chartGrid .chartBlock{margin-top:0}
+.chartBlock h4{margin:0 0 3px;font-size:19px}
+.chartBlock .sub{font-size:14px;color:var(--muted);margin:0 0 8px}
+.chartBlock svg{width:100%;height:auto;display:block}
+.explain{margin-top:12px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--purple);border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.5;color:var(--ink)}
+.explain b{display:block;margin-bottom:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:800;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.verdictList{margin:8px 0 0;padding-left:22px;font-size:15px;line-height:1.55}
+.aiReveal{animation:fadeUp .45s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
 @media(max-width:820px){
   .hero{grid-template-columns:1fr;min-height:auto}
   .heroArt{min-height:300px}
@@ -160,7 +161,6 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
   .calMetrics,.results{grid-template-columns:1fr 1fr}
   .choiceGrid{grid-template-columns:repeat(2,1fr)}
   .game{min-height:590px}
-  .holes{gap:4px}
   .miniCam{width:92px}
   .miniCam canvas{width:92px;height:69px}
 }
@@ -179,14 +179,8 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
   .score{font-size:15px;padding:8px 10px}
   .miniCam{width:84px;border-width:3px}
   .miniCam canvas{width:84px;height:63px}
-  .holes{width:96%;height:34%;bottom:5%}
-  .hole{width:20%}
-  .hole:nth-child(1){left:31%;top:10%;transform:translateX(-50%)}
-  .hole:nth-child(2){left:69%;top:10%;transform:translateX(-50%)}
-  .hole:nth-child(3){left:16%;bottom:0;transform:translateX(-50%)}
-  .hole:nth-child(4){left:50%;bottom:0;transform:translateX(-50%)}
-  .hole:nth-child(5){left:84%;bottom:0;transform:translateX(-50%)}
-  .critter{font-size:clamp(50px,16vw,78px)}
+  .burrow{font-size:clamp(48px,15vw,80px)}
+  .burrow.far{font-size:clamp(36px,11vw,58px)}
   .choiceOverlay{padding:10px}
   .choiceGrid{gap:8px;width:98%}
   .personChoice{border-width:4px;border-radius:18px}
@@ -216,16 +210,51 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
         <p class="note" style="margin-top:12px">Bu yakuniy klinik tashxis emas. Natijalar rivojlanish bo‘yicha dastlabki skrining va keyingi tekshiruv zaruratini baholashga yordam beradi.</p>
       </div>
       <div class="heroArt">
-        <div class="sun">🌞</div><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><div class="cloud c3">☁️</div><div class="cloud c4">☁️</div>
-        <div class="mountainsMini">
-          <div class="mountainMini mm1"></div><div class="mountainMini mm2"></div><div class="mountainMini mm3"></div>
-        </div>
+        <svg class="scene" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+          <rect x="0" y="0" width="1000" height="330" fill="#cdefff"/>
+          <circle cx="690" cy="104" r="56" fill="#ffe89a" opacity=".5"/>
+          <circle cx="690" cy="104" r="39" fill="#ffd95a"/>
+          <g fill="#ffffff" opacity=".9">
+            <g transform="translate(150,142)"><ellipse rx="50" ry="23"/><ellipse cx="-32" cy="8" rx="28" ry="16"/><ellipse cx="33" cy="7" rx="32" ry="17"/></g>
+            <g transform="translate(400,98)" opacity=".82"><ellipse rx="42" ry="19"/><ellipse cx="-26" cy="7" rx="24" ry="13"/><ellipse cx="28" cy="6" rx="26" ry="14"/></g>
+          </g>
+          <path d="M0 322 L110 214 L205 288 L318 186 L452 300 L520 246 L620 322 Z" fill="#a8bdcd"/>
+          <path d="M620 322 L720 208 L812 284 L905 196 L1000 300 L1000 322 Z" fill="#a8bdcd"/>
+          <path d="M-20 322 L150 176 L300 322 Z" fill="#8ba4b8"/>
+          <path d="M150 176 L103 216 L120 205 L136 219 L152 203 L170 218 L191 216 Z" fill="#f5fbff"/>
+          <path d="M330 322 L470 150 L620 322 Z" fill="#88a1b6"/>
+          <path d="M470 150 L429 200 L446 189 L462 203 L478 187 L495 201 L514 200 Z" fill="#f5fbff"/>
+          <path d="M690 322 L800 182 L930 322 Z" fill="#8ba4b8"/>
+          <path d="M800 182 L765 226 L779 216 L792 229 L806 214 L822 228 L841 226 Z" fill="#f5fbff"/>
+          <path d="M0 318 C160 302 320 320 500 314 C680 306 850 320 1000 312 L1000 700 L0 700 Z" fill="#9bd97c"/>
+          <path d="M0 436 C200 416 400 452 600 432 C780 414 900 438 1000 428 L1000 700 L0 700 Z" fill="#85cc63"/>
+          <g>
+            <ellipse cx="350" cy="474" rx="82" ry="31" fill="#6d4a2e" opacity=".55"/><ellipse cx="350" cy="470" rx="76" ry="27" fill="#2c1d13"/>
+            <ellipse cx="650" cy="474" rx="82" ry="31" fill="#6d4a2e" opacity=".55"/><ellipse cx="650" cy="470" rx="76" ry="27" fill="#2c1d13"/>
+            <ellipse cx="230" cy="605" rx="96" ry="37" fill="#6d4a2e" opacity=".55"/><ellipse cx="230" cy="600" rx="90" ry="32" fill="#2c1d13"/>
+            <ellipse cx="500" cy="620" rx="100" ry="39" fill="#6d4a2e" opacity=".55"/><ellipse cx="500" cy="614" rx="94" ry="34" fill="#2c1d13"/>
+            <ellipse cx="770" cy="605" rx="96" ry="37" fill="#6d4a2e" opacity=".55"/><ellipse cx="770" cy="600" rx="90" ry="32" fill="#2c1d13"/>
+          </g>
+          <g stroke="#57a747" stroke-width="3" fill="none" stroke-linecap="round">
+            <g transform="translate(360,612)"><path d="M0 0 c3 -9 7 -13 9 -18"/><path d="M0 0 c-3 -8 -7 -11 -10 -15"/><path d="M0 0 c0 -11 1 -15 1 -19"/></g>
+            <g transform="translate(640,612)"><path d="M0 0 c3 -9 7 -13 9 -18"/><path d="M0 0 c-3 -8 -7 -11 -10 -15"/><path d="M0 0 c0 -11 1 -15 1 -19"/></g>
+          </g>
+          <g>
+            <g transform="translate(90,428)"><path d="M0 0 V-16" stroke="#4f9f45" stroke-width="3"/><g fill="#ffb3d1"><circle cx="0" cy="-23" r="5.5"/><circle cx="-6" cy="-18" r="5.5"/><circle cx="6" cy="-18" r="5.5"/><circle cx="-4" cy="-28" r="5.5"/><circle cx="4" cy="-28" r="5.5"/></g><circle cy="-23" r="3" fill="#ffe27a"/></g>
+            <g transform="translate(500,426)"><path d="M0 0 V-16" stroke="#4f9f45" stroke-width="3"/><g fill="#fff0a8"><circle cx="0" cy="-23" r="5.5"/><circle cx="-6" cy="-18" r="5.5"/><circle cx="6" cy="-18" r="5.5"/><circle cx="-4" cy="-28" r="5.5"/><circle cx="4" cy="-28" r="5.5"/></g><circle cy="-23" r="3" fill="#f7a53c"/></g>
+            <g transform="translate(908,430)"><path d="M0 0 V-16" stroke="#4f9f45" stroke-width="3"/><g fill="#c9b4ff"><circle cx="0" cy="-23" r="5.5"/><circle cx="-6" cy="-18" r="5.5"/><circle cx="6" cy="-18" r="5.5"/><circle cx="-4" cy="-28" r="5.5"/><circle cx="4" cy="-28" r="5.5"/></g><circle cy="-23" r="3" fill="#ffe27a"/></g>
+            <g transform="translate(112,548)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffd0e2"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+            <g transform="translate(888,548)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffe6a8"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#f7a53c"/></g>
+            <g transform="translate(48,560)"><ellipse cx="0" cy="-16" rx="26" ry="18" fill="#5fb14a"/><ellipse cx="-17" cy="-6" rx="15" ry="11" fill="#6cbd55"/><ellipse cx="17" cy="-7" rx="16" ry="12" fill="#6cbd55"/></g>
+            <g transform="translate(952,560)"><ellipse cx="0" cy="-16" rx="26" ry="18" fill="#5fb14a"/><ellipse cx="-17" cy="-6" rx="15" ry="11" fill="#6cbd55"/><ellipse cx="17" cy="-7" rx="16" ry="12" fill="#6cbd55"/></g>
+            <g transform="translate(66,686)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffb3d1"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+            <g transform="translate(350,684)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#fff0a8"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#f7a53c"/></g>
+            <g transform="translate(648,684)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#c9b4ff"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+            <g transform="translate(940,686)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffd0e2"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+          </g>
+        </svg>
         <div class="heroPrincess">👸</div>
-        <div class="bunny">🐰</div>
-        <div class="groundMini">
-          <div class="gMini gm1">🌼</div><div class="gMini gm2">🌷</div><div class="gMini gm3">🌻</div><div class="gMini gm4">🌸</div>
-        </div>
-        <div class="holesMini"><div class="hmini"></div><div class="hmini"></div><div class="hmini"></div><div class="hmini"></div><div class="hmini"></div></div>
+        <div class="heroBunny">🐰</div>
       </div>
     </div>
   </section>
@@ -306,28 +335,135 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
           <canvas id="miniOverlay"></canvas>
         </div>
       </div>
-      <div class="decor sun">🌞</div><div class="decor cloud1">☁️</div><div class="decor cloud2">☁️</div><div class="decor cloud3">☁️</div><div class="decor cloud4">☁️</div>
-      <div class="mountains">
-        <div class="mountainBack mb1"></div><div class="mountainBack mb2"></div>
-        <div class="mountain m1"></div><div class="mountain m2"></div><div class="mountain m3"></div>
-      </div>
-      <div class="groundDecor">
-        <div class="flower f1">🌼</div><div class="flower f2">🌷</div><div class="flower f3">🌻</div><div class="flower f4">🌸</div>
-        <div class="rock r1">🪨</div><div class="rock r2">🪨</div>
-        <div class="bush b1">🌿</div><div class="bush b2">🌿</div>
-      </div>
+      <svg class="scene" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#b6e6ff"/><stop offset="1" stop-color="#e9f8ff"/>
+          </linearGradient>
+          <linearGradient id="groundG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#a3dc83"/><stop offset="1" stop-color="#7cc45c"/>
+          </linearGradient>
+          <radialGradient id="holeG" cx="50%" cy="34%" r="70%">
+            <stop offset="0" stop-color="#3b2718"/><stop offset=".6" stop-color="#2a1c12"/><stop offset="1" stop-color="#20150e"/>
+          </radialGradient>
+          <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#fff6c2"/><stop offset="1" stop-color="#ffd24d"/>
+          </radialGradient>
+        </defs>
+
+        <rect x="0" y="0" width="1000" height="332" fill="url(#skyG)"/>
+        <circle cx="690" cy="104" r="58" fill="#ffe89a" opacity=".45"/>
+        <circle cx="690" cy="104" r="40" fill="url(#sunG)"/>
+        <g fill="#ffffff" opacity=".92">
+          <g transform="translate(150,142)"><ellipse rx="52" ry="24"/><ellipse cx="-34" cy="8" rx="30" ry="17"/><ellipse cx="34" cy="7" rx="34" ry="18"/></g>
+          <g transform="translate(400,96)" opacity=".8"><ellipse rx="44" ry="20"/><ellipse cx="-28" cy="7" rx="26" ry="14"/><ellipse cx="30" cy="6" rx="28" ry="15"/></g>
+          <g transform="translate(620,192)" opacity=".85"><ellipse rx="46" ry="21"/><ellipse cx="-30" cy="7" rx="26" ry="15"/><ellipse cx="30" cy="6" rx="28" ry="15"/></g>
+        </g>
+
+        <path d="M0 322 L110 214 L205 288 L318 186 L452 300 L520 246 L620 322 Z" fill="#a7bdce"/>
+        <path d="M620 322 L720 208 L812 284 L905 196 L1000 300 L1000 322 Z" fill="#a7bdce"/>
+        <path d="M-20 322 L150 176 L300 322 Z" fill="#8aa3b7"/>
+        <path d="M150 176 L103 216 L120 205 L136 219 L152 203 L170 218 L191 216 Z" fill="#f5fbff"/>
+        <path d="M330 322 L470 150 L620 322 Z" fill="#87a0b5"/>
+        <path d="M470 150 L429 200 L446 189 L462 203 L478 187 L495 201 L514 200 Z" fill="#f5fbff"/>
+        <path d="M690 322 L800 182 L930 322 Z" fill="#8aa3b7"/>
+        <path d="M800 182 L765 226 L779 216 L792 229 L806 214 L822 228 L841 226 Z" fill="#f5fbff"/>
+
+        <path d="M0 318 C160 302 320 320 500 314 C680 306 850 320 1000 312 L1000 700 L0 700 Z" fill="url(#groundG)"/>
+        <path d="M0 436 C200 416 400 452 600 432 C780 414 900 438 1000 428 L1000 700 L0 700 Z" fill="#87ce66"/>
+
+        <g>
+          <ellipse cx="350" cy="474" rx="82" ry="31" fill="#6d4a2e" opacity=".5"/><ellipse cx="350" cy="470" rx="76" ry="27" fill="url(#holeG)"/>
+          <ellipse cx="650" cy="474" rx="82" ry="31" fill="#6d4a2e" opacity=".5"/><ellipse cx="650" cy="470" rx="76" ry="27" fill="url(#holeG)"/>
+          <ellipse cx="230" cy="605" rx="96" ry="37" fill="#6d4a2e" opacity=".5"/><ellipse cx="230" cy="600" rx="90" ry="32" fill="url(#holeG)"/>
+          <ellipse cx="500" cy="620" rx="100" ry="39" fill="#6d4a2e" opacity=".5"/><ellipse cx="500" cy="614" rx="94" ry="34" fill="url(#holeG)"/>
+          <ellipse cx="770" cy="605" rx="96" ry="37" fill="#6d4a2e" opacity=".5"/><ellipse cx="770" cy="600" rx="90" ry="32" fill="url(#holeG)"/>
+        </g>
+
+        <g stroke="#57a747" stroke-width="3" fill="none" stroke-linecap="round">
+          <g transform="translate(360,614)"><path d="M0 0 c3 -9 7 -13 9 -18"/><path d="M0 0 c-3 -8 -7 -11 -10 -15"/><path d="M0 0 c0 -11 1 -15 1 -19"/></g>
+          <g transform="translate(640,614)"><path d="M0 0 c3 -9 7 -13 9 -18"/><path d="M0 0 c-3 -8 -7 -11 -10 -15"/><path d="M0 0 c0 -11 1 -15 1 -19"/></g>
+          <g transform="translate(480,540)"><path d="M0 0 c3 -9 7 -13 9 -18"/><path d="M0 0 c-3 -8 -7 -11 -10 -15"/><path d="M0 0 c0 -11 1 -15 1 -19"/></g>
+        </g>
+
+        <g>
+          <g transform="translate(90,428)"><path d="M0 0 V-16" stroke="#4f9f45" stroke-width="3"/><g fill="#ffb3d1"><circle cx="0" cy="-23" r="5.5"/><circle cx="-6" cy="-18" r="5.5"/><circle cx="6" cy="-18" r="5.5"/><circle cx="-4" cy="-28" r="5.5"/><circle cx="4" cy="-28" r="5.5"/></g><circle cy="-23" r="3" fill="#ffe27a"/></g>
+          <g transform="translate(504,424)"><path d="M0 0 V-16" stroke="#4f9f45" stroke-width="3"/><g fill="#fff0a8"><circle cx="0" cy="-23" r="5.5"/><circle cx="-6" cy="-18" r="5.5"/><circle cx="6" cy="-18" r="5.5"/><circle cx="-4" cy="-28" r="5.5"/><circle cx="4" cy="-28" r="5.5"/></g><circle cy="-23" r="3" fill="#f7a53c"/></g>
+          <g transform="translate(908,430)"><path d="M0 0 V-16" stroke="#4f9f45" stroke-width="3"/><g fill="#c9b4ff"><circle cx="0" cy="-23" r="5.5"/><circle cx="-6" cy="-18" r="5.5"/><circle cx="6" cy="-18" r="5.5"/><circle cx="-4" cy="-28" r="5.5"/><circle cx="4" cy="-28" r="5.5"/></g><circle cy="-23" r="3" fill="#ffe27a"/></g>
+          <g transform="translate(112,548)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffd0e2"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+          <g transform="translate(888,548)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffe6a8"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#f7a53c"/></g>
+          <g transform="translate(48,562)"><ellipse cx="0" cy="-16" rx="26" ry="18" fill="#5fb14a"/><ellipse cx="-17" cy="-6" rx="15" ry="11" fill="#6cbd55"/><ellipse cx="17" cy="-7" rx="16" ry="12" fill="#6cbd55"/></g>
+          <g transform="translate(952,562)"><ellipse cx="0" cy="-16" rx="26" ry="18" fill="#5fb14a"/><ellipse cx="-17" cy="-6" rx="15" ry="11" fill="#6cbd55"/><ellipse cx="17" cy="-7" rx="16" ry="12" fill="#6cbd55"/></g>
+          <g transform="translate(66,686)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffb3d1"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+          <g transform="translate(350,684)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#fff0a8"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#f7a53c"/></g>
+          <g transform="translate(648,684)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#c9b4ff"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+          <g transform="translate(940,686)"><path d="M0 0 V-18" stroke="#4f9f45" stroke-width="3"/><g fill="#ffd0e2"><circle cx="0" cy="-25" r="6"/><circle cx="-7" cy="-20" r="6"/><circle cx="7" cy="-20" r="6"/><circle cx="-4" cy="-31" r="6"/><circle cx="4" cy="-31" r="6"/></g><circle cy="-25" r="3.4" fill="#ffe27a"/></g>
+        </g>
+      </svg>
       <div id="princessHost" class="princessHost">
         <div id="princessBubble" class="princessBubble">💬</div>
         <div class="princessPeek">👸</div>
       </div>
       <div id="gameMessage" class="gameMessage"></div>
-      <div class="holes">
-        <div class="hole"><div class="critter">🐭</div></div>
-        <div class="hole"><div class="critter">🐹</div></div>
-        <div class="hole"><div class="critter">🐰</div></div>
-        <div class="hole"><div class="critter">🐭</div></div>
-        <div class="hole"><div class="critter">🐹</div></div>
+      <div class="burrow b4 far"><div class="critter">🐭</div></div>
+      <div class="burrow b5 far"><div class="critter">🐹</div></div>
+      <div class="burrow b1"><div class="critter">🐰</div></div>
+      <div class="burrow b2"><div class="critter">🐭</div></div>
+      <div class="burrow b3"><div class="critter">🐹</div></div>
+    </div>
+  </section>
+
+  <section id="analysis" class="card hidden">
+    <h2>AI tahlil</h2>
+    <p id="aiIntro">O‘yin va kamera ma’lumotlari qayta ishlanmoqda. Bu bir necha soniya oladi.</p>
+    <div class="aiBar"><i id="aiBarFill"></i></div>
+    <ul class="aiSteps" id="aiSteps"></ul>
+
+    <div id="aiReport" class="hidden">
+      <div class="chartGrid" style="margin-top:18px">
+        <div class="chartBlock">
+          <h4>Umumiy ko‘rsatkich</h4>
+          <p class="sub">Barcha yo‘nalishlar o‘rtachasi, 0–100</p>
+          <div id="chartGauge"></div>
+          <div class="explain" id="expGauge"></div>
+        </div>
+        <div class="chartBlock">
+          <h4>Yo‘nalishlar xaritasi</h4>
+          <p class="sub">Beshta yo‘nalish bir vaqtda</p>
+          <div id="chartRadar"></div>
+          <div class="explain" id="expRadar"></div>
+        </div>
       </div>
+
+      <div class="chartBlock">
+        <h4>Yo‘nalishlar bo‘yicha ball</h4>
+        <p class="sub">Kutilgan chegara — 60 ball (uzuq chiziq)</p>
+        <div id="chartBars"></div>
+        <div class="explain" id="expBars"></div>
+      </div>
+
+      <div class="chartBlock">
+        <h4>Diqqatning vaqt bo‘yicha o‘zgarishi</h4>
+        <p class="sub">Har 6 soniyada ekranga qaragan kadrlar ulushi</p>
+        <div id="chartTime"></div>
+        <div class="legend"><span><i style="background:#6d5dfc"></i>Diqqat ulushi</span><span><i style="background:#f0a93b"></i>Ovozli chaqiruv nuqtalari</span></div>
+        <div class="explain" id="expTime"></div>
+      </div>
+
+      <div class="chartBlock">
+        <h4>Reaksiya vaqtlari</h4>
+        <p class="sub">Har bir to‘g‘ri bosishgacha ketgan vaqt</p>
+        <div id="chartRt"></div>
+        <div class="explain" id="expRt"></div>
+      </div>
+
+      <div class="chartBlock">
+        <h4>AI xulosasi</h4>
+        <div id="aiVerdict"></div>
+      </div>
+
+      <button class="primary" style="margin-top:16px" id="toResult">Batafsil natijani ko‘rish</button>
+      <p class="note" style="margin-top:10px">Bu tahlil klinik tashxis emas. Grafiklar faqat bitta qisqa sessiya ma’lumotiga asoslangan.</p>
     </div>
   </section>
 
@@ -351,7 +487,10 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
     <h3 style="margin-top:18px">Qisqa tahlil</h3>
     <pre id="summary"></pre>
     <p class="note">Kamera o‘lchovlari haqiqiy kuzatuvlardan olinadi, ammo klinik ASD chegaralari sifatida tasdiqlanmagan.</p>
-    <button class="primary" onclick="location.reload()">Qayta boshlash</button>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="primary" onclick="location.reload()">Qayta boshlash</button>
+      <button class="secondary" onclick="downloadReport()">⬇️ Hisobotni yuklab olish</button>
+    </div>
   </section>
 </div>
 
@@ -376,6 +515,8 @@ let faceFrames=0,totalFrames=0,blinkCount=0,lastBlink=false;
 let activeCritter=null, critterTimeout=null, nextCritterTimer=null, popStarted=0;
 let reactionTimes=[],score=0;
 let eventData={name:null,aff:null,parentCorrect:null,parentLatency:null,parentChoice:null};
+let eventTimes={name:null,aff:null,parent:null};
+let metrics=null;
 let gamePaused=false;
 let gameEnded=false;
 let speechVoice=null;
@@ -432,7 +573,10 @@ async function speakText(text,{rate=.9,pitch=1.08,volume=1,icon='💬'}={}){
   });
 }
 function childName(){return $('childName').value.trim()}
-function parentWord(){return $('parentType').value==='mother'?'ayangni':'dadangni'}
+async function speakParent(){
+  const phrase=$('parentType').value==='mother'?'Aya qani?':'Dada qani?';
+  await speakText(phrase,{rate:.82,pitch:1.10,volume:1,icon:'🖼️'});
+}
 function showPrincess(icon='💬'){
   const host=$('princessHost'); const bubble=$('princessBubble');
   if(!host||!bubble)return;
@@ -448,9 +592,6 @@ async function speakCall(){
 }
 async function speakAffection(){
   await speakText(`Iye-e-e... ${childName()}... Voy, shirinim!`,{rate:.72,pitch:1.18,volume:.96,icon:'💖'});
-}
-async function speakParent(){
-  await speakText(`Qani... ${parentWord()} top-chi!`,{rate:.82,pitch:1.10,volume:1,icon:'🖼️'});
 }
 function warmSpeech(){
   if(!('speechSynthesis' in window))return;
@@ -714,6 +855,10 @@ async function responseEvent(type){
   if(gameEnded)return;
   const before={...current};
   const start=performance.now();
+  if(gameStart){
+    const at=(start-gameStart)/1000;
+    if(type==='name')eventTimes.name=at;else eventTimes.aff=at;
+  }
   if(type==='name'){showMessage('👂');await speakCall();}
   else{showMessage('💛');await speakAffection();}
   let found=null;
@@ -749,6 +894,7 @@ function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
 
 async function parentChoiceEvent(){
   if(gameEnded)return;
+  if(gameStart)eventTimes.parent=(performance.now()-gameStart)/1000;
   pauseGame();
   const game=$('game');
   const overlay=document.createElement('div');
@@ -807,6 +953,7 @@ window.startGame=async()=>{
   $('score').textContent='0';
   gameEnded=false;gamePaused=false;
   eventData={name:null,aff:null,parentCorrect:null,parentLatency:null,parentChoice:null};
+  eventTimes={name:null,aff:null,parent:null};
   gameStart=performance.now();
   spawnCritter();
 
@@ -837,67 +984,418 @@ function repetitiveSwitches(values){
   }
   return count;
 }
-function finishGame(){
-  if(gameEnded)return;
-  gameEnded=true;gameStart=0;
-  if(critterTimeout)clearTimeout(critterTimeout);
-  if(nextCritterTimer)clearTimeout(nextCritterTimer);
-  if(activeCritter){activeCritter.classList.remove('up');activeCritter=null}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
 
+/* ---------- Metrics ---------- */
+function computeMetrics(){
   const faces=gameLog.filter(x=>x.face);
-  const off=faces.filter(x=>x.gaze!=='center'||x.head!=='center').length/Math.max(1,faces.length);
+  const off=faces.length?faces.filter(x=>x.gaze!=='center'||x.head!=='center').length/faces.length:1;
   const rep=repetitiveSwitches(faces.map(x=>x.yaw));
   let gazeChanges=0,headChanges=0,pg='center',ph='center';
   for(const x of faces){
     if(x.gaze!==pg){gazeChanges++;pg=x.gaze}
     if(x.head!==ph){headChanges++;ph=x.head}
   }
-  const smileDelta=Math.max(0,...faces.map(x=>x.smile-baseline.smile));
-  const browDelta=Math.max(0,...faces.map(x=>x.brow-baseline.brow));
-  const confidence=faces.length/Math.max(1,gameLog.length);
-
-  go('result');
+  const smileDelta=faces.length?Math.max(0,...faces.map(x=>x.smile-baseline.smile)):0;
+  const browDelta=faces.length?Math.max(0,...faces.map(x=>x.brow-baseline.brow)):0;
+  const confidence=gameLog.length?faces.length/gameLog.length:0;
   const reactionMedian=reactionTimes.length?median(reactionTimes):null;
-  $('rGame').textContent=reactionMedian?reactionMedian.toFixed(2)+' soniya':'—';
-  $('rName').textContent=eventData.name?eventData.name.toFixed(2)+' soniya':'aniq topilmadi';
-  $('rAff').textContent=eventData.aff?eventData.aff.toFixed(2)+' soniya':'aniq topilmadi';
-  $('rParent').textContent=eventData.parentCorrect===true?'to‘g‘ri tanladi':eventData.parentCorrect===false?'boshqa rasmni tanladi':'bajarilmadi';
-  $('rParentLat').textContent=eventData.parentLatency?eventData.parentLatency.toFixed(2)+' soniya':'—';
-  $('rConf').textContent=Math.round(confidence*100)+'%';
-  $('rGaze').textContent=gazeChanges;
-  $('rHead').textContent=headChanges;
-  $('rOff').textContent=Math.round(off*100)+'%';
-  $('rSmile').textContent=smileDelta.toFixed(2);
-  $('rBrow').textContent=browDelta.toFixed(2);
-  $('rRepeat').textContent=rep;
+
+  const sAtt=Math.round(clamp((1-off)*100,0,100));
+  const sMotor=reactionMedian==null?null:Math.round(clamp(100-(reactionMedian-.55)*46,5,100));
+  const sName=eventData.name==null?12:Math.round(clamp(100-(eventData.name-.6)*24,15,100));
+  const sParent=eventData.parentCorrect===true
+    ? Math.round(clamp(100-((eventData.parentLatency||1.2)-1.2)*10,55,100))
+    : eventData.parentCorrect===false?28:12;
+  const sExpr=Math.round(clamp((smileDelta*1.25+browDelta*.85)*130,5,100));
+
+  const domains=[
+    {label:'Diqqat barqarorligi',short:'Diqqat',score:sAtt,missing:false},
+    {label:'Ismga ijtimoiy javob',short:'Ismga javob',score:sName,missing:false},
+    {label:'Ota-onani tanish',short:'Ota-ona',score:sParent,missing:false},
+    {label:'Emotsional javob',short:'Mimika',score:sExpr,missing:false},
+    {label:'Motor reaksiya',short:'Reaksiya',score:sMotor==null?0:sMotor,missing:sMotor==null}
+  ];
+  const valid=domains.filter(d=>!d.missing);
+  const composite=Math.round(valid.reduce((a,d)=>a+d.score,0)/Math.max(1,valid.length));
+
+  const binSec=6,binCount=10,bins=[];
+  for(let i=0;i<binCount;i++){
+    const seg=gameLog.filter(x=>x.t>=i*binSec*1000&&x.t<(i+1)*binSec*1000);
+    const f=seg.filter(x=>x.face);
+    bins.push({
+      from:i*binSec,to:(i+1)*binSec,
+      value:f.length?Math.round(f.filter(x=>x.gaze==='center'&&x.head==='center').length/f.length*100):null
+    });
+  }
 
   const flags=[];
   if(eventData.name==null)flags.push('ismga chaqirilganda aniq orientatsiya kuzatilmadi');
   if(eventData.parentCorrect===false)flags.push('ota-ona rasmi boshqa rasmdan ajratilmadi');
-  if(off>.60)flags.push('ekrandan chalg‘ish ulushi yuqori');
-  if(rep>10)flags.push('bosh yo‘nalishining takroriy almashishi ko‘p');
+  if(off>.60)flags.push('ekrandan chalg\u2018ish ulushi yuqori');
+  if(rep>10)flags.push('bosh yo\u2018nalishining takroriy almashishi ko\u2018p');
   if(confidence<.65)flags.push('kamera kuzatuv sifati past');
-  let level=flags.length>=3?'YUQORI':flags.length>=1?'O‘RTACHA':'PAST';
-  $('risk').innerHTML=(level==='YUQORI'?'🔴':level==='O‘RTACHA'?'🟠':'🟢')+` <b>Dastlabki kuzatuv darajasi: ${level}</b>`;
+  const level=flags.length>=3?'YUQORI':flags.length>=1?'O\u2018RTACHA':'PAST';
 
-  $('summary').textContent=`O‘yin natijasi: ${score}
-Bosishga o‘rtacha reaksiya: ${reactionMedian?reactionMedian.toFixed(2)+' soniya':'ma’lumot yo‘q'}
+  return {off,rep,gazeChanges,headChanges,smileDelta,browDelta,confidence,reactionMedian,
+          domains,composite,bins,flags,level,score,times:[...reactionTimes]};
+}
+
+/* ---------- Chart builders (inline SVG, no libraries) ---------- */
+function scoreColor(v){return v>=70?'#2fa36a':v>=45?'#f0a93b':'#e2574c'}
+
+function gaugeSVG(v){
+  const R=74,C=2*Math.PI*R,dash=C*clamp(v,0,100)/100,col=scoreColor(v);
+  return `<svg viewBox="0 0 230 200">
+    <g transform="translate(115,100)">
+      <circle r="${R}" fill="none" stroke="#e7eff6" stroke-width="20"/>
+      <circle r="${R}" fill="none" stroke="${col}" stroke-width="20" stroke-linecap="round"
+        stroke-dasharray="${dash.toFixed(1)} ${(C-dash).toFixed(1)}" transform="rotate(-90)"/>
+      <text y="4" text-anchor="middle" font-size="48" font-weight="900" fill="#17324a">${v}</text>
+      <text y="32" text-anchor="middle" font-size="15" font-weight="800" fill="#617688">100 balldan</text>
+    </g></svg>`;
+}
+
+function radarSVG(domains){
+  const cx=210,cy=150,R=92,n=domains.length;
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [cx+Math.cos(a)*r,cy+Math.sin(a)*r]};
+  let rings='';
+  [.25,.5,.75,1].forEach(k=>{
+    rings+=`<polygon points="${domains.map((_,i)=>pt(i,R*k).map(v=>v.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#dfeaf2"/>`;
+  });
+  let axes='',labels='';
+  domains.forEach((d,i)=>{
+    const [x,y]=pt(i,R);
+    axes+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#e6eff5"/>`;
+    const [lx,ly]=pt(i,R+18);
+    const anchor=Math.abs(lx-cx)<8?'middle':(lx>cx?'start':'end');
+    labels+=`<text x="${lx.toFixed(1)}" y="${(ly+4).toFixed(1)}" font-size="12.5" font-weight="900" fill="#617688" text-anchor="${anchor}">${d.short}</text>`;
+  });
+  const poly=domains.map((d,i)=>pt(i,R*clamp(d.score,0,100)/100).map(v=>v.toFixed(1)).join(',')).join(' ');
+  const dots=domains.map((d,i)=>{const [x,y]=pt(i,R*clamp(d.score,0,100)/100);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="#6d5dfc"/>`}).join('');
+  return `<svg viewBox="0 0 420 300">${rings}${axes}
+    <polygon points="${poly}" fill="rgba(109,93,252,.22)" stroke="#6d5dfc" stroke-width="2.5"/>
+    ${dots}${labels}</svg>`;
+}
+
+function barsSVG(domains){
+  const W=700,rowH=44,padTop=12,labelW=176,trackX=labelW,trackW=W-trackX-46;
+  const H=padTop+domains.length*rowH+20;
+  const refX=trackX+trackW*.6;
+  let out=`<svg viewBox="0 0 ${W} ${H}">`;
+  domains.forEach((d,i)=>{
+    const y=padTop+i*rowH;
+    const v=d.missing?0:clamp(d.score,0,100),col=scoreColor(v);
+    out+=`<text x="0" y="${y+23}" font-size="15" font-weight="900" fill="#17324a">${d.label}</text>`;
+    out+=`<rect x="${trackX}" y="${y+7}" width="${trackW}" height="22" rx="11" fill="#e9f1f7"/>`;
+    if(!d.missing)out+=`<rect x="${trackX}" y="${y+7}" width="${(trackW*v/100).toFixed(1)}" height="22" rx="11" fill="${col}"/>`;
+    out+=`<text x="${W-2}" y="${y+24}" font-size="15" font-weight="900" fill="${d.missing?'#93a6b5':col}" text-anchor="end">${d.missing?'\u2014':v}</text>`;
+  });
+  out+=`<line x1="${refX.toFixed(1)}" y1="4" x2="${refX.toFixed(1)}" y2="${H-20}" stroke="#55708a" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/>`;
+  out+=`<text x="${refX.toFixed(1)}" y="${H-4}" font-size="12" font-weight="800" fill="#8296a6" text-anchor="middle">60 ball</text>`;
+  return out+'</svg>';
+}
+
+function timeSVG(bins,events){
+  const W=700,H=256,L=44,R=16,T=26,B=36;
+  const iw=W-L-R,ih=H-T-B;
+  const X=i=>L+iw*(i/Math.max(1,bins.length-1));
+  const Y=v=>T+ih*(1-clamp(v,0,100)/100);
+  let grid='';
+  [0,25,50,75,100].forEach(v=>{
+    grid+=`<line x1="${L}" y1="${Y(v).toFixed(1)}" x2="${W-R}" y2="${Y(v).toFixed(1)}" stroke="#e6eff5"/>`;
+    grid+=`<text x="${L-8}" y="${(Y(v)+4).toFixed(1)}" font-size="11" font-weight="800" fill="#8296a6" text-anchor="end">${v}%</text>`;
+  });
+  const pts=bins.map((b,i)=>b.value==null?null:[X(i),Y(b.value)]).filter(Boolean);
+  let area='',line='',dots='';
+  if(pts.length>1){
+    const d=pts.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(' ');
+    area=`<path d="${d} L${pts[pts.length-1][0].toFixed(1)} ${T+ih} L${pts[0][0].toFixed(1)} ${T+ih} Z" fill="rgba(109,93,252,.14)"/>`;
+    line=`<path d="${d}" fill="none" stroke="#6d5dfc" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
+  }
+  dots=pts.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4.5" fill="#fff" stroke="#6d5dfc" stroke-width="3"/>`).join('');
+  const total=bins.length*6;
+  let ev='';
+  events.forEach(e=>{
+    if(e.t==null)return;
+    const ex=L+iw*clamp(e.t/total,0,1);
+    ev+=`<line x1="${ex.toFixed(1)}" y1="${T}" x2="${ex.toFixed(1)}" y2="${T+ih}" stroke="#f0a93b" stroke-width="2" stroke-dasharray="5 5"/>`;
+    ev+=`<text x="${ex.toFixed(1)}" y="${T-8}" font-size="11.5" font-weight="900" fill="#c1811f" text-anchor="middle">${e.label}</text>`;
+  });
+  let xlab='';
+  bins.forEach((b,i)=>{if(i%2===0)xlab+=`<text x="${X(i).toFixed(1)}" y="${H-12}" font-size="11" font-weight="800" fill="#8296a6" text-anchor="middle">${b.from}s</text>`});
+  let gap='';
+  if(!pts.length)gap=`<text x="${(L+iw/2).toFixed(1)}" y="${(T+ih/2).toFixed(1)}" font-size="15" font-weight="800" fill="#93a6b5" text-anchor="middle">Yuz yetarli kadrda aniqlanmadi</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}">${grid}${area}${line}${dots}${ev}${xlab}${gap}</svg>`;
+}
+
+function rtSVG(times){
+  const W=700,H=214,L=44,R=14,T=16,B=32;
+  const iw=W-L-R,ih=H-T-B;
+  if(!times.length){
+    return `<svg viewBox="0 0 ${W} ${H}"><rect x="${L}" y="${T}" width="${iw}" height="${ih}" rx="14" fill="#f2f7fb"/>
+      <text x="${L+iw/2}" y="${T+ih/2+5}" font-size="15" font-weight="800" fill="#93a6b5" text-anchor="middle">To\u2018g\u2018ri bosish qayd etilmadi</text></svg>`;
+  }
+  const max=Math.max(2.4,...times)*1.12;
+  const Y=v=>T+ih*(1-clamp(v/max,0,1));
+  const bw=Math.min(44,(iw/times.length)*.62);
+  let grid='';
+  [0,1,2,3].filter(v=>v<=max).forEach(v=>{
+    grid+=`<line x1="${L}" y1="${Y(v).toFixed(1)}" x2="${W-R}" y2="${Y(v).toFixed(1)}" stroke="#e6eff5"/>`;
+    grid+=`<text x="${L-8}" y="${(Y(v)+4).toFixed(1)}" font-size="11" font-weight="800" fill="#8296a6" text-anchor="end">${v}s</text>`;
+  });
+  let bars='';
+  times.forEach((t,i)=>{
+    const cx=L+(iw/times.length)*(i+.5);
+    const h=Math.max(3,T+ih-Y(t));
+    const col=t<=1.2?'#2fa36a':t<=2?'#f0a93b':'#e2574c';
+    bars+=`<rect x="${(cx-bw/2).toFixed(1)}" y="${Y(t).toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="7" fill="${col}"/>`;
+    if(times.length<=14)bars+=`<text x="${cx.toFixed(1)}" y="${(Y(t)-6).toFixed(1)}" font-size="11" font-weight="900" fill="#617688" text-anchor="middle">${t.toFixed(1)}</text>`;
+    bars+=`<text x="${cx.toFixed(1)}" y="${H-12}" font-size="11" font-weight="800" fill="#8296a6" text-anchor="middle">${i+1}</text>`;
+  });
+  const med=median(times);
+  const ml=`<line x1="${L}" y1="${Y(med).toFixed(1)}" x2="${W-R}" y2="${Y(med).toFixed(1)}" stroke="#6d5dfc" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="${L+4}" y="${(Y(med)-8).toFixed(1)}" font-size="11.5" font-weight="900" fill="#6d5dfc" text-anchor="start">mediana ${med.toFixed(2)}s</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}">${grid}${bars}${ml}</svg>`;
+}
+
+/* ---------- Explanations ---------- */
+function bandWord(v){return v>=70?'kutilganday':v>=45?'qisman':'past'}
+
+function renderAnalysis(m){
+  const nm=childName()||'bola';
+
+  $('chartGauge').innerHTML=gaugeSVG(m.composite);
+  $('expGauge').innerHTML=`<b>Bu nimani anglatadi?</b>
+    Umumiy ko\u2018rsatkich \u2014 beshta yo\u2018nalish ballining o\u2018rtachasi: <b style="display:inline">${m.composite}</b> ball, ya\u2018ni ${bandWord(m.composite)} daraja.
+    70 dan yuqori \u2014 bu sessiyada javoblar kutilgan darajada; 45\u201370 \u2014 ba\u2018zi yo\u2018nalishlar bo\u2018sh chiqqan; 45 dan past \u2014 testni boshqa vaqtda, bola tetik holatda takrorlash kerak.
+    Bitta o\u2018yin natijasi kam ma\u2018lumot beradi, shuning uchun bu ball tashxis emas.`;
+
+  $('chartRadar').innerHTML=radarSVG(m.domains);
+  const sorted=[...m.domains].filter(d=>!d.missing).sort((a,b)=>b.score-a.score);
+  const best=sorted[0],worst=sorted[sorted.length-1];
+  $('expRadar').innerHTML=`<b>Bu nimani anglatadi?</b>
+    Beshburchak qanchalik chetga yoyilgan bo\u2018lsa, o\u2018sha yo\u2018nalish shuncha kuchli.
+    Eng kuchli yo\u2018nalish \u2014 <b style="display:inline">${best.label}</b> (${best.score}), eng bo\u2018sh yo\u2018nalish \u2014 <b style="display:inline">${worst.label}</b> (${worst.score}).
+    Shakl bir tomonga qiyshaygan bo\u2018lsa, bu ${nm}ning barcha sohada emas, aynan bitta sohada qiynalganini ko\u2018rsatadi \u2014 keyingi kuzatuvda shu yo\u2018nalishga e\u2018tibor bering.`;
+
+  $('chartBars').innerHTML=barsSVG(m.domains);
+  const low=m.domains.filter(d=>!d.missing&&d.score<60).map(d=>d.label);
+  const miss=m.domains.filter(d=>d.missing).map(d=>d.label);
+  $('expBars').innerHTML=`<b>Bu nimani anglatadi?</b>
+    Uzuq chiziq \u2014 60 ball, ya\u2018ni bu yoshda odatda kutiladigan eng kam daraja.
+    ${low.length?`Chiziqdan pastda qolgan yo\u2018nalishlar: <b style="display:inline">${low.join(', ')}</b>. Bu yo\u2018nalishlarni yana bir-ikki marta tekshirish kerak.`:'Barcha o\u2018lchangan yo\u2018nalishlar chiziqdan yuqorida.'}
+    ${miss.length?` O\u2018lchanmagan yo\u2018nalish: ${miss.join(', ')} \u2014 ma\u2018lumot yetarli bo\u2018lmadi.`:''}
+    Yashil \u2014 yaxshi, sariq \u2014 chegaraga yaqin, qizil \u2014 past.`;
+
+  $('chartTime').innerHTML=timeSVG(m.bins,[
+    {t:eventTimes.name,label:'ism'},
+    {t:eventTimes.parent,label:'rasm'},
+    {t:eventTimes.aff,label:'erkalash'}
+  ]);
+  const vals=m.bins.filter(b=>b.value!=null);
+  const h1=vals.filter(b=>b.from<30),h2=vals.filter(b=>b.from>=30);
+  const avg=a=>a.length?Math.round(a.reduce((s,b)=>s+b.value,0)/a.length):null;
+  const a1=avg(h1),a2=avg(h2);
+  let trend='ma\u2018lumot yetarli emas';
+  if(a1!=null&&a2!=null)trend=a2-a1>=10?`ikkinchi yarmida oshgan (${a1}% \u2192 ${a2}%)`:a1-a2>=10?`ikkinchi yarmida pasaygan (${a1}% \u2192 ${a2}%)`:`sessiya davomida barqaror (${a1}% \u2192 ${a2}%)`;
+  $('expTime').innerHTML=`<b>Bu nimani anglatadi?</b>
+    Chiziq yuqorida bo\u2018lsa, bola aynan o\u2018sha soniyalarda ekranga qarab turgan. Pastga tushgan joylari \u2014 chalg\u2018igan paytlar.
+    Bu sessiyada diqqat ${trend}.
+    Sariq uzuq chiziqlar \u2014 tizim ovoz chiqargan payt (ismni chaqirish, rasm topshirig\u2018i, erkalash). Ovozdan keyin chiziq ko\u2018tarilsa, bola chaqiruvga javob bergan; o\u2018zgarmasa, chaqiruv e\u2018tiborni tortmagan.
+    Tez pasayish esa toliqish yoki qiziqishning yo\u2018qolishini ko\u2018rsatadi.`;
+
+  $('chartRt').innerHTML=rtSVG(m.times);
+  let rtText;
+  if(m.reactionMedian==null){
+    rtText='Bu sessiyada to\u2018g\u2018ri bosish qayd etilmadi. Sababi diqqat, tushunmovchilik yoki ekranga tegishdagi qiyinchilik bo\u2018lishi mumkin \u2014 o\u2018yinni birga ko\u2018rsatib takrorlang.';
+  }else{
+    rtText=`Mediana \u2014 ${m.reactionMedian.toFixed(2)} soniya: hayvon chiqqandan keyin bola o\u2018rtacha shu vaqtda bosgan. 1,2 soniyagacha \u2014 tez, 2 soniyagacha \u2014 o\u2018rtacha, undan yuqorisi \u2014 sekin. Ustunlarning bir xilligi muhim: keskin sakrashlar diqqatning uzilib-uzilib turganini ko\u2018rsatadi.`;
+  }
+  $('expRt').innerHTML=`<b>Bu nimani anglatadi?</b> ${rtText}`;
+
+  const lvlIcon=m.level==='YUQORI'?'\u{1F534}':m.level==='O\u2018RTACHA'?'\u{1F7E0}':'\u{1F7E2}';
+  $('aiVerdict').innerHTML=`
+    <div class="status" style="margin-top:0">${lvlIcon} <b>Dastlabki kuzatuv darajasi: ${m.level}</b></div>
+    <p style="margin:12px 0 0;font-size:16px">
+      Tizim ${Math.round(m.confidence*100)}% kadrda yuzni aniq kuzatdi. ${m.flags.length
+        ? 'Quyidagi belgilar e\u2018tiborni tortdi:'
+        : 'Kuchli ogohlantiruvchi belgi kuzatilmadi.'}
+    </p>
+    ${m.flags.length?`<ol class="verdictList">${m.flags.map(f=>`<li>${f}</li>`).join('')}</ol>`:''}
+    <p style="margin:12px 0 0;font-size:16px">
+      ${m.level==='PAST'
+        ? 'Hozircha qo\u2018shimcha tekshiruvga ko\u2018rsatma yo\u2018q. 2\u20133 hafta o\u2018tib takroriy sessiya o\u2018tkazish yetarli.'
+        : m.level==='O\u2018RTACHA'
+        ? 'Testni boshqa kunda, bola to\u2018q va tetik holatda takrorlang. Belgilar takrorlansa, shifokorga ko\u2018rsatish uchun natijani saqlang.'
+        : 'Bir necha belgi bir vaqtda kuzatildi. Natijani saqlab, bola shifokori yoki nevrologiga ko\u2018rsatish tavsiya etiladi.'}
+    </p>`;
+}
+
+/* ---------- Analysis stage animation ---------- */
+const AI_STEPS=[
+  ['\u{1F3A5}','Video kadrlar yig\u2018ilmoqda'],
+  ['\u{1F441}\uFE0F','Nigoh yo\u2018nalishi hisoblanmoqda'],
+  ['\u{1F9ED}','Bosh burilish modeli qurilmoqda'],
+  ['\u{1F642}','Mimika o\u2018zgarishlari o\u2018lchanmoqda'],
+  ['\u23F1\uFE0F','Reaksiya vaqtlari taqqoslanmoqda'],
+  ['\u{1F4CA}','Yo\u2018nalishlar bo\u2018yicha ball chiqarilmoqda']
+];
+async function runAnalysis(){
+  const list=$('aiSteps');
+  list.innerHTML=AI_STEPS.map((s,i)=>`<li id="aiStep${i}"><span class="ic">${s[0]}</span><span>${s[1]}</span></li>`).join('');
+  $('aiReport').classList.add('hidden');
+  $('aiReport').classList.remove('aiReveal');
+  $('aiIntro').textContent='O\u2018yin va kamera ma\u2018lumotlari qayta ishlanmoqda. Bu bir necha soniya oladi.';
+  $('aiBarFill').style.width='0%';
+  for(let i=0;i<AI_STEPS.length;i++){
+    const li=$('aiStep'+i);
+    li.classList.add('run');
+    await wait(560+Math.random()*320);
+    li.classList.remove('run');li.classList.add('done');
+    li.querySelector('.ic').textContent='\u2705';
+    $('aiBarFill').style.width=Math.round((i+1)/AI_STEPS.length*100)+'%';
+  }
+  $('aiIntro').textContent='Tahlil tayyor. Grafiklar shu bitta sessiyadagi kuzatuvni ko\u2018rsatadi.';
+  renderAnalysis(metrics);
+  $('aiReport').classList.remove('hidden');
+  $('aiReport').classList.add('aiReveal');
+}
+$('toResult').addEventListener('click',()=>go('result'));
+
+/* ---------- Result page ---------- */
+function renderResult(m){
+  $('rGame').textContent=m.reactionMedian?m.reactionMedian.toFixed(2)+' soniya':'\u2014';
+  $('rName').textContent=eventData.name?eventData.name.toFixed(2)+' soniya':'aniq topilmadi';
+  $('rAff').textContent=eventData.aff?eventData.aff.toFixed(2)+' soniya':'aniq topilmadi';
+  $('rParent').textContent=eventData.parentCorrect===true?'to\u2018g\u2018ri tanladi':eventData.parentCorrect===false?'boshqa rasmni tanladi':'bajarilmadi';
+  $('rParentLat').textContent=eventData.parentLatency?eventData.parentLatency.toFixed(2)+' soniya':'\u2014';
+  $('rConf').textContent=Math.round(m.confidence*100)+'%';
+  $('rGaze').textContent=m.gazeChanges;
+  $('rHead').textContent=m.headChanges;
+  $('rOff').textContent=Math.round(m.off*100)+'%';
+  $('rSmile').textContent=m.smileDelta.toFixed(2);
+  $('rBrow').textContent=m.browDelta.toFixed(2);
+  $('rRepeat').textContent=m.rep;
+  $('risk').innerHTML=(m.level==='YUQORI'?'\u{1F534}':m.level==='O\u2018RTACHA'?'\u{1F7E0}':'\u{1F7E2}')+` <b>Dastlabki kuzatuv darajasi: ${m.level}</b>`;
+
+  $('summary').textContent=`Umumiy ko\u2018rsatkich: ${m.composite}/100
+O\u2018yin natijasi: ${m.score}
+Bosishga o\u2018rtacha reaksiya: ${m.reactionMedian?m.reactionMedian.toFixed(2)+' soniya':'ma\u2019lumot yo\u2018q'}
 Ismga reaksiya: ${eventData.name?eventData.name.toFixed(2)+' soniya':'aniq topilmadi'}
 Erkalab chaqirishga reaksiya: ${eventData.aff?eventData.aff.toFixed(2)+' soniya':'aniq topilmadi'}
-Ota-onani tanish: ${eventData.parentCorrect===true?'to‘g‘ri tanlandi':eventData.parentCorrect===false?'boshqa rasm tanlandi':'bajarilmadi'}
-Tanlash vaqti: ${eventData.parentLatency?eventData.parentLatency.toFixed(2)+' soniya':'ma’lumot yo‘q'}
-Ko‘z yo‘nalishi o‘zgarishlari: ${gazeChanges}
-Bosh burilishlari: ${headChanges}
-Ekrandan chalg‘ish: ${Math.round(off*100)}%
-Tabassum o‘zgarishi: ${smileDelta.toFixed(3)}
-Qosh harakati o‘zgarishi: ${browDelta.toFixed(3)}
-Takroriy bosh almashishi: ${rep}
-Kuzatuv aniqligi: ${Math.round(confidence*100)}%
+Ota-onani tanish: ${eventData.parentCorrect===true?'to\u2018g\u2018ri tanlandi':eventData.parentCorrect===false?'boshqa rasm tanlandi':'bajarilmadi'}
+Tanlash vaqti: ${eventData.parentLatency?eventData.parentLatency.toFixed(2)+' soniya':'ma\u2019lumot yo\u2018q'}
+Ko\u2018z yo\u2018nalishi o\u2018zgarishlari: ${m.gazeChanges}
+Bosh burilishlari: ${m.headChanges}
+Ekrandan chalg\u2018ish: ${Math.round(m.off*100)}%
+Tabassum o\u2018zgarishi: ${m.smileDelta.toFixed(3)}
+Qosh harakati o\u2018zgarishi: ${m.browDelta.toFixed(3)}
+Takroriy bosh almashishi: ${m.rep}
+Kuzatuv aniqligi: ${Math.round(m.confidence*100)}%
+
+Yo\u2018nalishlar bo\u2018yicha ball:
+${m.domains.map(d=>`\u2022 ${d.label}: ${d.missing?'o\u2018lchanmadi':d.score+'/100'}`).join('\n')}
 
 Kuzatilgan belgilar:
-${flags.length?flags.map((x,i)=>`${i+1}. ${x}`).join('\n'):'Kuchli ogohlantiruvchi belgi kuzatilmadi.'}
+${m.flags.length?m.flags.map((x,i)=>`${i+1}. ${x}`).join('\n'):'Kuchli ogohlantiruvchi belgi kuzatilmadi.'}
 
 MUHIM: bu natijalar klinik tashxis emas.`;
+}
+
+/* ---------- Download standalone report ---------- */
+function downloadReport(){
+  const nm=childName()||'bola';
+  const ageSel=$('age');
+  const age=ageSel?ageSel.options[ageSel.selectedIndex].text:'';
+  const dateStr=new Date().toLocaleDateString('uz-UZ');
+
+  const riskHTML=$('risk').innerHTML;
+  const resultsHTML=document.querySelector('#result .results').outerHTML;
+  const summaryText=$('summary').textContent;
+
+  const reportClone=$('aiReport').cloneNode(true);
+  reportClone.querySelector('#toResult')?.remove();
+  const chartsHTML=reportClone.innerHTML;
+
+  const html=`<!doctype html>
+<html lang="uz"><head><meta charset="utf-8">
+<title>AutismoTrack — hisobot — ${nm}</title>
+<style>
+:root{--ink:#17324a;--muted:#617688;--line:#dbe9f1;--card:#ffffff;--purple:#6d5dfc}
+*{box-sizing:border-box}
+body{margin:0;padding:24px;background:#f4fbff;font-family:Nunito,Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}
+.wrap{max-width:920px;margin:auto}
+h1{font-size:26px;margin:0 0 2px}
+.meta{color:var(--muted);font-size:15px;margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;margin-bottom:16px;box-shadow:0 10px 28px rgba(40,80,110,.06)}
+h2,h3,h4{margin-top:0}
+.status{border-radius:17px;padding:13px 15px;background:#f1f6f9;font-weight:900;font-size:16px}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.resultBox{border:1px solid var(--line);border-radius:18px;padding:14px;background:#fbfdff}
+.resultBox span{font-size:13px;color:var(--muted);display:block}
+.resultBox b{font-size:21px;display:block;margin-top:5px}
+.chartGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chartBlock{margin-top:14px;border:1px solid var(--line);border-radius:22px;padding:16px;background:#fbfdff}
+.chartGrid .chartBlock{margin-top:0}
+.chartBlock h4{margin:0 0 3px;font-size:19px}
+.chartBlock .sub{font-size:14px;color:var(--muted);margin:0 0 8px}
+.chartBlock svg{width:100%;height:auto;display:block}
+.explain{margin-top:12px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--purple);border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.5}
+.explain b{display:block;margin-bottom:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:800;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.verdictList{margin:8px 0 0;padding-left:22px;font-size:15px;line-height:1.55}
+pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;padding:16px;line-height:1.55;font-size:14px}
+.note{font-size:13px;color:var(--muted);line-height:1.45}
+@media(max-width:700px){.results{grid-template-columns:1fr 1fr}.chartGrid{grid-template-columns:1fr}}
+@media print{body{background:#fff}.card{box-shadow:none}}
+</style></head>
+<body><div class="wrap">
+  <h1>AutismoTrack — skrining hisoboti</h1>
+  <p class="meta">Bola: <b>${nm}</b>${age?' &nbsp;•&nbsp; Yosh: '+age:''} &nbsp;•&nbsp; Sana: ${dateStr}</p>
+
+  <div class="card">
+    <h2 style="margin-bottom:10px">Natija</h2>
+    ${riskHTML}
+    <div style="margin-top:14px">${resultsHTML}</div>
+    <h3 style="margin-top:18px">Qisqa tahlil</h3>
+    <pre>${summaryText}</pre>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:4px">AI tahlil grafiklari</h2>
+    ${chartsHTML}
+  </div>
+
+  <p class="note">Bu hujjat AutismoTrack ilovasi tomonidan avtomatik yaratildi. Natijalar klinik tashxis emas — dastlabki skrining va shifokor bilan maslahatlashish zarurligini baholash uchun mo‘ljallangan.</p>
+</div></body></html>`;
+
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=`AutismoTrack-hisobot-${nm.replace(/[^\p{L}\p{N}_-]+/gu,'_')||'bola'}.html`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+
+function finishGame(){
+  if(gameEnded)return;
+  gameEnded=true;gameStart=0;
+  if(critterTimeout)clearTimeout(critterTimeout);
+  if(nextCritterTimer)clearTimeout(nextCritterTimer);
+  if(activeCritter){activeCritter.classList.remove('up');activeCritter=null}
+  if('speechSynthesis' in window)speechSynthesis.cancel();
+  hidePrincess();
+
+  metrics=computeMetrics();
+  renderResult(metrics);
+  go('analysis');
+  runAnalysis();
 }
 </script>
 </body>
