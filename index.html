@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#8ed0ff">
+<meta name="color-scheme" content="light only">
 <title>AutismoTrack</title>
 <style>
 :root{
@@ -17,7 +18,8 @@
   --soft:#f7fbff;
 }
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:Nunito,Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f4fbff;color:var(--ink)}
+html{color-scheme:light only}
+html,body{margin:0;min-height:100%;font-family:Nunito,Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f4fbff !important;color:var(--ink)}
 button,input,select{font:inherit}
 button{cursor:pointer}
 .app{max-width:1080px;margin:auto;padding:16px}
@@ -187,9 +189,30 @@ pre{white-space:pre-wrap;background:#102033;color:#eaf4ff;border-radius:20px;pad
   .choiceTitle{margin-bottom:10px}
   .calMetrics{grid-template-columns:1fr 1fr 1fr}
 }
+
+/* Rotate-to-landscape gate: on phones, the game only runs sideways */
+.rotateGate{
+  position:fixed;inset:0;z-index:99999;display:none;
+  flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;text-align:center;padding:30px;
+  background:linear-gradient(160deg,#eaf7ff,#dcefff);
+}
+.rotateGate .ic{font-size:76px;animation:rotateHint 1.7s ease-in-out infinite}
+.rotateGate p{margin:0;font-size:19px;font-weight:900;color:var(--ink);line-height:1.5;max-width:320px}
+.rotateGate span{font-size:15px;font-weight:700;color:var(--muted)}
+@keyframes rotateHint{0%,100%{transform:rotate(0deg)}50%{transform:rotate(90deg)}}
+@media(max-width:900px) and (orientation:portrait){
+  .rotateGate{display:flex}
+  .app{display:none}
+}
 </style>
 </head>
 <body>
+<div id="rotateGate" class="rotateGate">
+  <div class="ic">📱</div>
+  <p>Bu ilova faqat gorizontal (yotiq) holatda ishlaydi</p>
+  <span>Telefoningizni yon tomonga ag‘daring 🔄</span>
+</div>
 <div class="app">
   <div class="brand">AutismoTrack</div>
 
@@ -528,31 +551,38 @@ window.go = id => {
   window.scrollTo({top:0,behavior:'smooth'});
 };
 
-/* ---------- Natural-ish automatic speech ---------- */
+/* ---------- Natural-ish automatic speech (young girl voice) ---------- */
 function chooseBestVoice(){
   const voices=speechSynthesis.getVoices();
   if(!voices.length) return null;
-  const priorities=[
-    v=>/^uz/i.test(v.lang),
-    v=>/uzbek/i.test(v.name),
-    v=>/^tr/i.test(v.lang) && /female|woman|google/i.test(v.name),
-    v=>/^ru/i.test(v.lang) && /female|woman|google|alena|milena/i.test(v.name),
-    v=>/^tr/i.test(v.lang),
-    v=>/^ru/i.test(v.lang),
-    v=>/google|microsoft/i.test(v.name)
-  ];
-  for(const test of priorities){
-    const found=voices.find(test);
-    if(found) return found;
+  const maleHints=/\b(male|man|boy)\b|erkak|nikolai|pavel|dmitri|yuri|boris|ivan|filipp|maxim|ahmet|mehmet|\bcem\b|kerem|umit|mert|david|daniel|mark|fred|george|james|thomas|oliver|liam|aleksandr|sergei/i;
+  const femaleHints=/\b(female|woman|girl)\b|ayol|qiz|milena|alena|yelena|elena|anna|katya|irina|olga|tatyana|natasha|filiz|seda|yelda|zeynep|elif|ayse|samantha|victoria|karen|zira|susan|moira|tessa|fiona|amelie|salli|joanna|ivy|kimberly|kendra/i;
+  function score(v){
+    const n=v.name||'',lang=v.lang||'';
+    let s=0;
+    if(/^uz/i.test(lang))s+=100;
+    if(/uzbek/i.test(n))s+=60;
+    if(femaleHints.test(n))s+=45;
+    if(maleHints.test(n))s-=70;
+    if(/^tr/i.test(lang))s+=18;
+    if(/^ru/i.test(lang))s+=15;
+    if(/google/i.test(n))s+=8;
+    if(/^en/i.test(lang))s+=2;
+    return s;
   }
-  return voices[0];
+  let best=voices[0],bestScore=-Infinity;
+  for(const v of voices){
+    const s=score(v);
+    if(s>bestScore){bestScore=s;best=v;}
+  }
+  return best;
 }
 function refreshVoices(){speechVoice=chooseBestVoice()}
 if('speechSynthesis' in window){
   refreshVoices();
   speechSynthesis.onvoiceschanged=refreshVoices;
 }
-async function speakText(text,{rate=.9,pitch=1.08,volume=1,icon='💬'}={}){
+async function speakText(text,{rate=.9,pitch=1.4,volume=1,icon='💬'}={}){
   showPrincess(icon);
   if(!('speechSynthesis' in window)) {
     await wait(1800);
@@ -575,7 +605,7 @@ async function speakText(text,{rate=.9,pitch=1.08,volume=1,icon='💬'}={}){
 function childName(){return $('childName').value.trim()}
 async function speakParent(){
   const phrase=$('parentType').value==='mother'?'Aya qani?':'Dada qani?';
-  await speakText(phrase,{rate:.82,pitch:1.10,volume:1,icon:'🖼️'});
+  await speakText(phrase,{rate:.86,pitch:1.42,volume:1,icon:'🖼️'});
 }
 function showPrincess(icon='💬'){
   const host=$('princessHost'); const bubble=$('princessBubble');
@@ -588,10 +618,10 @@ function hidePrincess(){
   if(host)host.classList.remove('show');
 }
 async function speakCall(){
-  await speakText(`Hey... ${childName()}!`,{rate:.86,pitch:1.10,volume:1,icon:'👂'});
+  await speakText(`Hey... ${childName()}!`,{rate:.9,pitch:1.42,volume:1,icon:'👂'});
 }
 async function speakAffection(){
-  await speakText(`Iye-e-e... ${childName()}... Voy, shirinim!`,{rate:.72,pitch:1.18,volume:.96,icon:'💖'});
+  await speakText(`Iye-e-e... ${childName()}... Voy, shirinim!`,{rate:.76,pitch:1.5,volume:.96,icon:'💖'});
 }
 function warmSpeech(){
   if(!('speechSynthesis' in window))return;
@@ -1397,6 +1427,31 @@ function finishGame(){
   go('analysis');
   runAnalysis();
 }
+</script>
+<script>
+/* JS fallback: some in-app/embedded browsers don't recompute the
+   CSS orientation media query reliably, so re-check on every resize too. */
+(function(){
+  function checkOrientation(){
+    var gate=document.getElementById('rotateGate');
+    var app=document.querySelector('.app');
+    if(!gate||!app)return;
+    var w=window.innerWidth,h=window.innerHeight;
+    var isPortrait=h>=w;
+    var isPhoneSize=Math.min(w,h)<=900;
+    if(isPortrait&&isPhoneSize){
+      gate.style.display='flex';
+      app.style.display='none';
+    }else{
+      gate.style.display='none';
+      app.style.display='';
+    }
+  }
+  window.addEventListener('resize',checkOrientation);
+  window.addEventListener('orientationchange',function(){setTimeout(checkOrientation,200)});
+  document.addEventListener('DOMContentLoaded',checkOrientation);
+  checkOrientation();
+})();
 </script>
 </body>
 </html>
